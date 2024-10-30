@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5f1fd0;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-container {
+            background-color: white;
+            width: 800px;
+            max-width: 90%;
+            display: flex;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .contact-left {
+            background-color: #f5f2ff;
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-left h2 {
+            color: #8a4bf9;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-left img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+        }
+
+        .contact-right {
+            background-color: #8a4bf9;
+            width: 50%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .contact-right h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-right input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            font-size: 16px;
+            background-color: #b78bff;
+            color: white;
+        }
+
+        .contact-right button {
+            background-color: white;
+            color: #8a4bf9;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 48%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contact-container" id="loginContainer">
+        <!-- Sección Izquierda -->
+        <div class="contact-left">
+            <img src="imagen3.jpg" alt="Ilustración">
+        </div>
+        
+        <!-- Sección Derecha -->
+        <div class="contact-right">
+            <h3>Inicio de Sesion</h3>
+            <form>
+                <input type="text" placeholder="Email" required>
+                <input type="password" placeholder="Contraseña" required>
+                <div class="buttons">
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
