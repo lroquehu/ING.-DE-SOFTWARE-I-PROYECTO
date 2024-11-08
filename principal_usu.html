@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matrícula</title>
+    <title>Matrícula - Academia Prodigios</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -18,7 +17,7 @@
             background-color: #f5f5f5;
         }
         .sidebar {
-            width: 220px;
+            width: 250px;
             background-color: #3b157b;
             color: #fff;
             padding-top: 20px;
@@ -62,63 +61,57 @@
             cursor: pointer;
         }
 
-        .sidebar ul li a:hover {
+        .sidebar ul li a:hover, .sidebar ul li a.active {
             background-color: #8a4bf9;
             color: #fff;
-        }
-
-        .sidebar ul li a.active {
-            background-color: #8a4bf9;
             font-weight: bold;
             border-left: 4px solid #fff;
         }
 
         .main-content {
             flex: 1;
-            padding: 20px;
+            padding: 30px;
         }
 
         .form-container {
             background-color: #fff;
-            padding: 20px;
+            padding: 25px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
 
         .form-container h2 {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 15px;
-            color: #333;
+            color: #3b157b;
         }
 
         .form-group {
             display: flex;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            align-items: center;
         }
 
         .form-group label {
-            width: 120px;
+            width: 150px;
             font-weight: bold;
             font-size: 14px;
+            color: #333;
         }
 
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 5px;
+            padding: 8px;
             border: 1px solid #ccc;
             border-radius: 4px;
             font-size: 14px;
         }
 
-        .form-group input[type="date"] {
-            padding-right: 10px;
-        }
-
         .button-group {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             margin-top: 20px;
         }
 
@@ -126,15 +119,16 @@
             background-color: #8a4bf9;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 12px 20px;
             border-radius: 5px;
             cursor: pointer;
             font-size: 14px;
+            font-weight: bold;
             transition: background-color 0.3s;
         }
 
         .button-group button:hover {
-            background-color: #7423c8; 
+            background-color: #7423c8;
         }
 
         /* Table layout */
@@ -153,13 +147,14 @@
         }
 
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
+            font-size: 14px;
         }
 
         th {
-            background-color: #f2f2f2;
-            font-weight: bold;
+            background-color: #3b157b;
+            color: #fff;
         }
 
         tr:nth-child(even) {
@@ -167,8 +162,38 @@
         }
 
         .other-section {
-            display: none; 
+            display: none;
         }
+
+        .logout-btn {
+            background-color: #3b157b; /* Fondo morado oscuro */
+            color: #fff; /* Texto blanco */
+            border: 2px solid #3b157b; /* Borde morado del mismo color que el fondo */
+            padding: 12px 25px; /* Aumenta el padding para hacerlo más grande */
+            border-radius: 30px; /* Bordes redondeados para una forma más de botón */
+            cursor: pointer; /* Apunta con el cursor */
+            font-size: 16px; /* Tamaño de fuente mayor */
+            font-weight: bold; /* Negrita */
+            width: 80%; /* Ancho completo */
+            margin-top: 20px; /* Espacio superior */
+            transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Transición suave */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .logout-btn:hover {
+            background-color: #5f28a0; /* Fondo morado más claro en hover */
+            border-color: #5f28a0; /* Cambia el borde al color del fondo en hover */
+            transform: translateY(-2px); /* Sutil efecto de elevación */
+        }
+
+        .logout-btn:active {
+            background-color: #2b0f56; /* Fondo morado aún más oscuro cuando se hace clic */
+            border-color: #2b0f56; /* Borde más oscuro cuando se hace clic */
+            transform: translateY(2px); /* Efecto de hundimiento */
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -177,11 +202,13 @@
     <img src="logo.png" alt="Logo" class="logo">
     <h2>PRODIGIOS</h2>
     <ul>
-        <li><a href="#" class="menu-item active">Matrícula</a></li>
-        <li><a href="#" class="menu-item">Mis cursos</a></li>
-        <li><a href="#" class="menu-item">Horario</a></li>
-        <li><a href="#" class="menu-item">Perfil</a></li>
+        <li><a href="#" class="menu-item active" data-section="matricula">Matrícula</a></li>
+        <li><a href="#" class="menu-item" data-section="cursos">Mis cursos</a></li>
+        <li><a href="#" class="menu-item" data-section="horario">Horario</a></li>
+        <li><a href="#" class="menu-item" data-section="perfil">Perfil</a></li>
     </ul>
+    <button id="logout-btn" class="logout-btn">Cerrar sesión</button> <!-- Agregado -->
+    
 </div>
 
 <div class="main-content">
@@ -210,14 +237,15 @@
         </div>
         <div class="form-group">
             <label for="pago">Registrar pago:</label>
-            <input type="file" id="pago" name="pago"required>
+            <input type="file" id="pago" name="pago" required>
         </div>
+        
         <h2>Seleccionar Cursos</h2>
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>ID</th>
                         <th>Curso</th>
                         <th>Vacantes</th>
                         <th>Profesor</th>
@@ -226,28 +254,50 @@
                         <th>Acciones</th>
                     </tr>
                 </thead>
+                <tbody id="cursos-tbody">
+                    <!-- Aquí se añadirán las filas dinámicamente -->
+                </tbody>
             </table>
         </div>
         <div class="button-group">
-            <button>Confirmar inscripción</button>
-            <button>Cancelar</button>
+            <button onclick="confirmInscription()">Confirmar inscripción</button>
+            <button onclick="cancelInscription()">Cancelar</button>
         </div>
     </div>
 
-    <!-- Otras sefecciones-->
+    <!-- Otras secciones -->
     <div id="cursos" class="form-container other-section">
         <h2>Mis Cursos</h2>
-        <p></p>
+        <p>Aquí puedes ver tus cursos matriculados.</p>
     </div>
     <div id="horario" class="form-container other-section">
         <h2>Horario</h2>
-        <p></p>
+        <p>Consulta tu horario semanal aquí.</p>
     </div>
     <div id="perfil" class="form-container other-section">
         <h2>Perfil</h2>
-        <p>Contenido.</p>
+        <p>Información del perfil del usuario.</p>
     </div>
 </div>
+
+<script src="navegacion.js"></script>
+<script src="validacionFormulario.js"></script>
+<script src="cursos.js"></script>
+<script src="matricula.js"></script>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('.form-container');
+        sections.forEach(section => section.classList.add('other-section'));
+        
+        document.getElementById(sectionId).classList.remove('other-section');
+
+        // Actualizar la barra lateral
+        const links = document.querySelectorAll('.menu-item');
+        links.forEach(link => link.classList.remove('active'));
+        document.querySelector(`.menu-item[onclick="showSection('${sectionId}')"]`).classList.add('active');
+    }
+</script>
 
 </body>
 </html>

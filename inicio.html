@@ -99,14 +99,31 @@
         <!-- Sección Derecha -->
         <div class="contact-right">
             <h3>Inicio de Sesion</h3>
-            <form>
-                <input type="text" placeholder="Email" required>
-                <input type="password" placeholder="Contraseña" required>
+            <form id="loginForm">
+                <input type="text" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
                 <div class="buttons">
                     <button type="submit">Ingresar</button>
                 </div>
             </form>
+
+            <!-- INFORMACIÓN TEMPOLAR (PARA ELIMINAR) -->
+            <div class="test-credentials">
+                <h4>Credenciales de prueba :)</h4>
+                <strong>Email:</strong> 
+                <p>admin@example.com</p>
+                <p>estudiante@example.com</p>
+                <p>docente@example.com</p>
+                <p><strong>Contraseña para todos:</strong> 123</p>
+            </div>
+
         </div>
     </div>
+
+    
+    <script src="navegacion.js"></script>
+    <script src="validacionFormulario.js"></script>
+    <script src="cursos.js"></script>
+    
 </body>
 </html>

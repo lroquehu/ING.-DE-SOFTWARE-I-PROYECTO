@@ -11,10 +11,12 @@ body {
 }
 
 header {
-    background-color: #5e2b91;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #5e2b91; /* Fondo morado oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado dentro del header */
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    justify-content: space-between; /* Alineamos los elementos a los extremos */
+    align-items: center; /* Alineamos verticalmente en el centro */
 }
 
 h1 {
@@ -121,3 +123,38 @@ main {
 .regresar-btn button:hover {
     background-color: #774aac; 
 }
+
+
+/* Botón de cerrar sesión */
+.logout-btn {
+    background-color: #3b157b; /* Fondo morado oscuro */
+    color: #fff; /* Texto blanco */
+    border: 2px solid #3b157b; /* Borde morado del mismo color que el fondo */
+    padding: 12px 25px; /* Aumenta el padding para hacerlo más grande */
+    border-radius: 30px; /* Bordes redondeados para una forma más de botón */
+    cursor: pointer; /* Apunta con el cursor */
+    font-size: 16px; /* Tamaño de fuente mayor */
+    font-weight: bold; /* Negrita */
+    width: auto; /* Ancho automático */
+    max-width: 250px; /* Ancho máximo para que no sea demasiado grande */
+    display: block; /* Lo convierte en bloque para poder centrarlo */
+    margin: 20px auto; /* Centrado automático y margen superior */
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Efecto hover */
+.logout-btn:hover {
+    background-color: rgb(255, 255, 255); 
+    color: #000000; 
+    border-color: #5f28a0; /* Cambia el borde al color del fondo en hover */
+    transform: translateY(-2px); /* Sutil efecto de elevación */
+}
+
+/* Efecto activo */
+.logout-btn:active {
+    background-color: #2b0f56; /* Fondo morado aún más oscuro cuando se hace clic */
+    border-color: #2b0f56; /* Borde más oscuro cuando se hace clic */
+    transform: translateY(2px); /* Efecto de hundimiento */
+}
+
