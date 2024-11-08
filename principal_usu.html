@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .sidebar {
+            width: 220px;
+            background-color: #3b157b;
+            color: #fff;
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-right: 2px solid #ddd;
+        }
+
+        .sidebar .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .sidebar ul li a {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background 0.3s, color 0.3s;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #8a4bf9;
+            color: #fff;
+        }
+
+        .sidebar ul li a.active {
+            background-color: #8a4bf9;
+            font-weight: bold;
+            border-left: 4px solid #fff;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .form-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            width: 120px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input[type="date"] {
+            padding-right: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button-group button {
+            background-color: #8a4bf9;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .button-group button:hover {
+            background-color: #7423c8; 
+        }
+
+        /* Table layout */
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .other-section {
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h2>PRODIGIOS</h2>
+    <ul>
+        <li><a href="#" class="menu-item active">Matrícula</a></li>
+        <li><a href="#" class="menu-item">Mis cursos</a></li>
+        <li><a href="#" class="menu-item">Horario</a></li>
+        <li><a href="#" class="menu-item">Perfil</a></li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <!-- Formulario de matrícula -->
+    <div id="matricula" class="form-container">
+        <h2>Información del Estudiante</h2>
+        <div class="form-group">
+            <label for="nombre">Nombres:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" name="apellido" required>
+        </div>
+        <div class="form-group">
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="pago">Registrar pago:</label>
+            <input type="file" id="pago" name="pago"required>
+        </div>
+        <h2>Seleccionar Cursos</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Curso</th>
+                        <th>Vacantes</th>
+                        <th>Profesor</th>
+                        <th>Horario</th>
+                        <th>Turno</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="button-group">
+            <button>Confirmar inscripción</button>
+            <button>Cancelar</button>
+        </div>
+    </div>
+
+    <!-- Otras sefecciones-->
+    <div id="cursos" class="form-container other-section">
+        <h2>Mis Cursos</h2>
+        <p></p>
+    </div>
+    <div id="horario" class="form-container other-section">
+        <h2>Horario</h2>
+        <p></p>
+    </div>
+    <div id="perfil" class="form-container other-section">
+        <h2>Perfil</h2>
+        <p>Contenido.</p>
+    </div>
+</div>
+
+</body>
+</html>
