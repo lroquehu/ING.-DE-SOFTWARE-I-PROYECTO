@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario para Crear Curso</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100vh;
+            color: #ecf0f1;
+        }
+
+        .container {
+            background-color: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 100%;
+            overflow-y: auto;
+            background-image: url('https://www.transparenttextures.com/patterns/black-tie.png');
+            background-size: cover;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #ecf0f1;
+            font-size: 22px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #bdc3c7;
+        }
+
+        input, select {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #7f8c8d;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+        .courses-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 75%;
+            padding: 30px;
+            margin: 20px;
+            height: calc(93vh - 40px);
+            overflow-y: auto;
+            background-color: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #listaCursos {
+            display: flex;
+            flex-wrap: wrap; /* Permite que los cursos se muevan a la siguiente fila si no caben */
+            gap: 15px; /* Espacio entre los cursos */
+        }
+
+        .course-card {
+            background-color: #2c3e50;
+            padding: 20px;
+            border: 1px solid #7f8c8d;
+            border-radius: 8px;
+            width: calc(50% - 50px); /* Ancho de la tarjeta de curso */
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            min-height: 180px;
+            color: #ecf0f1;
+        }
+
+        .course-card:hover {
+            background-color: #34495e;
+        }
+
+        .course-details {
+            margin-bottom: 20px;
+        }
+
+        .x-btn {
+            font-size: 24px;
+            color: #999;
+            position: absolute;
+            top: -10px;
+            right: 0px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: normal;
+            padding: 3px 5px;
+        }
+
+        .x-btn:hover {
+            color: #fff;
+            background-color: transparent;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .action-buttons button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            flex-grow: 1;
+        }
+
+        .action-buttons button.cancel,
+        .action-buttons button.remove-btn { /* Asegura que el botón eliminar tenga el mismo estilo que cancelar */
+            background-color: #95a5a6;
+        }
+
+        .action-buttons button:hover {
+            background-color: #3498db;
+        }
+
+        .action-buttons button.cancel:hover,
+        .action-buttons button.remove-btn:hover { /* Asegura que el hover también sea consistente */
+            background-color: #7f8c8d;
+        }
+
+        .separator {
+            width: 1px;
+            background-color: #7f8c8d;
+            height: 95vh;
+            margin: 20px;
+        }
+
+        .left-section {
+            width: 25%;
+            padding: 30px;
+            margin: 20px;
+            background-color: #34495e;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: calc(93vh - 40px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="left-section">
+        <h1>Crear Nuevo Curso</h1>
+        <form id="formCurso" onsubmit="crearCurso(event)">
+            <label for="nombreCurso">Nombre del Curso:</label>
+            <input type="text" id="nombreCurso" required>
+            <label for="descripcionCurso">Descripción del Curso:</label>
+            <input type="text" id="descripcionCurso" required>
+            <label for="fechaInicio">Fecha de Inicio:</label>
+            <input type="date" id="fechaInicio" required>
+            <label for="fechaFin">Fecha Final:</label>
+            <input type="date" id="fechaFin" required onchange="calcularDuracion()">
+            <label for="duracionCurso">Duración (en semanas):</label>
+            <input type="text" id="duracionCurso" disabled>
+            <label for="precioTotal">Precio Total:</label>
+            <input type="number" id="precioTotal" step="0.01" required>
+            <button type="submit">Crear Curso</button>
+        </form>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="courses-container">
+        <h2>Cursos Creados</h2>
+        <div id="listaCursos"></div>
+
+        <div class="action-buttons">
+            <button onclick="publicarCursos()">Publicar</button>
+            <button onclick="cancelarCursos()" class="cancel">Cancelar</button>
+        </div>
+    </div>
+
+    <script>
+        function calcularDuracion() {
+            const fechaInicio = new Date(document.getElementById('fechaInicio').value);
+            const fechaFin = new Date(document.getElementById('fechaFin').value);
+
+            if (fechaFin && fechaInicio) {
+                const diffTime = Math.abs(fechaFin - fechaInicio);
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
+                const semanas = Math.ceil(diffDays / 7);
+                document.getElementById('duracionCurso').value = semanas;
+            }
+        }
+
+        function crearCurso(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombreCurso").value;
+            const descripcion = document.getElementById("descripcionCurso").value;
+            const fechaInicio = document.getElementById("fechaInicio").value;
+            const fechaFin = document.getElementById("fechaFin").value;
+            const duracion = document.getElementById("duracionCurso").value;
+            const precio = document.getElementById("precioTotal").value;
+
+            const nuevoCurso = document.createElement("div");
+            nuevoCurso.classList.add("course-card");
+
+            nuevoCurso.innerHTML = `
+                <button class="x-btn" onclick="eliminarCurso(this)">×</button>
+                <div class="course-details">
+                    <strong>${nombre}</strong><br>
+                    <em>Descripción:</em> ${descripcion}<br>
+                    <em>Fecha de Inicio:</em> ${fechaInicio}<br>
+                    <em>Fecha de Fin:</em> ${fechaFin}<br>
+                    <em>Duración:</em> ${duracion} semanas<br>
+                    <em>Precio:</em> $${precio}
+                </div>
+                <div class="action-buttons">
+                    <button class="edit-btn" onclick="editarCurso(this)">Modificar</button>
+                    <button class="remove-btn" onclick="eliminarCurso(this)">Eliminar</button>
+                </div>
+            `;
+
+            document.getElementById("listaCursos").appendChild(nuevoCurso);
+            document.getElementById("formCurso").reset();
+        }
+
+        function eliminarCurso(button) {
+            const curso = button.closest(".course-card");
+            curso.remove();
+        }
+
+        function cancelarCursos() {
+            document.getElementById("listaCursos").innerHTML = '';
+        }
+
+        function publicarCursos() {
+            if (document.getElementById("listaCursos").children.length > 0) {
+                alert("Cursos publicados exitosamente.");
+            } else {
+                alert("No hay cursos creados para publicar.");
+            }
+        }
+    </script>
+
+</body>
+</html>
