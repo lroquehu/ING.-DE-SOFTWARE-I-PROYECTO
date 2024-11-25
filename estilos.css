@@ -1,13 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 body {
     background-color: #f0f4f8;
-    padding: 20px;
 }
 
 header {
@@ -99,7 +97,8 @@ nav ul li a {
     text-decoration: none;
 }
 main {
-    margin-top: 20px;
+    padding: 20px;
+    margin: 0;
 }
 .header-container {
     position: relative;
@@ -123,7 +122,6 @@ main {
 .regresar-btn button:hover {
     background-color: #774aac; 
 }
-
 
 /* Botón de cerrar sesión */
 .logout-btn {
