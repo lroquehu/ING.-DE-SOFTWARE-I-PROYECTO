@@ -8,7 +8,7 @@
             $password = $_POST["passwordLogin"];
 
             // Usar consultas preparadas para evitar inyección SQL
-            $stmt = $conn->prepare("SELECT * FROM Usuarios WHERE email = ? AND password = ?");
+            $stmt = $conn->prepare("SELECT * FROM Usuarios WHERE `email` = ? AND `password` = ?");
             $stmt->bind_param("ss", $email, $password);
             $stmt->execute();
             $result = $stmt->get_result();
@@ -20,7 +20,6 @@
                 $modalMessage = "Email o contraseña incorrectos";
             }
         }
-
         // Registro de usuario
         if (isset($_POST["nombreRegistro"]) && isset($_POST["emailRegistro"]) && isset($_POST["passwordRegistro"])) {
             $nombre = $_POST["nombreRegistro"];
