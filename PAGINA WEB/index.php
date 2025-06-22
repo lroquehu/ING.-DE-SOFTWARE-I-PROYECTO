@@ -49,127 +49,748 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMdXh5jzMRej1A6i/2D9tnM/ZL1v1pV15j06u" crossorigin="anonymous">
   <style>
+    :root {
+      --primary-color: #2c4d90 ;
+      --secondary-color: #f8f9fa;
+      --accent-color: #ff6b6b;
+      --text-color: #333;
+      --light-text: #f8f9fa;
+      --dark-blue: #1a365d;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
-    }
-    header {
-      background-color: #2c4d90;
-      padding: 0.5rem;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .carousel-item img {
-      width: 1122px;
-      height: 656px;
-      object-fit: cover;
-    }
-    h1 {
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #2c4d90;
-      text-transform: uppercase;
-      display: inline-block;
-      text-align: center;
-      width: 100%;
-    }
-    h3 {
-      color: #2c4d90;
-      font-size: 1.5rem;
-      text-align: center;
-    }
-    p {
-      font-size: 1.1rem;
+      color: var(--text-color);
       line-height: 1.6;
-      text-align: center;
+      scroll-behavior: smooth;
     }
-    footer p {
-        margin: 0;
+
+    header {
+      background-color: var(--primary-color);
+      padding: 0.5rem 0;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    /* Modal de detalles del curso */
+    .course-modal .modal-content {
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .course-modal .modal-header {
+      background: var(--primary-color);
+      color: white;
+      border-bottom: none;
+    }
+
+    .course-modal .modal-body {
+      padding: 30px;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
     .navbar-nav .nav-link {
-      color: white;
-      font-size: 1rem;
-      margin-right: 15px;
-      transition: color 0.3s ease;
+      color: var(--light-text);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      position: relative;
     }
-    .navbar-nav .nav-link:hover {
-      color: #9c9c9c;
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: var(--accent-color);
     }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1rem;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link:focus::after {
+      width: calc(100% - 2rem);
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: var(--dark-blue);
+      border-color: var(--dark-blue);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-light:hover {
+      color: var(--primary-color);
+    }
+
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+
+    h2 {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+
+    .section-padding {
+      padding: 5rem 0;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      bottom: 30%;
+    }
+
     .accordion-button {
-      background-color: #2c4d90;
-      color: white;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: background-color 0.3s ease;
-    }
-    .accordion-button:hover {
-      background-color: #2c4d90;
-      opacity: 0.9;
-    }
-    footer {
-      background-color: #2c4d90;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 20px;
-      letter-spacing: 1px;
-    }
-    .modal-header {
-      background-color: #2c4d90;
-      color: white;
-    }
-    .modal-footer button {
-      color: white;
+      background-color: var(--primary-color);
+      color: var(--light-text);
       font-weight: 600;
     }
-    form label {
+
+    .accordion-button:not(.collapsed) {
+      background-color: var(--dark-blue);
+      color: var(--light-text);
+    }
+
+    .accordion-button:focus {
+      box-shadow: 0 0 0 0.25rem rgba(44, 77, 144, 0.25);
+    }
+
+    .card {
+      border: none;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .instructor-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 3px solid var(--primary-color);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--light-text);
+      padding: 2rem 0;
+    }
+
+    .social-icons a {
+      color: var(--light-text);
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 0.25rem rgba(44, 77, 144, 0.25);
+    }
+
+    .map-container {
+      height: 100%;
+      min-height: 300px;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .course-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border: 2px solid var(--primary-color);
+      background: transparent;
+      color: var(--primary-color);
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Estilos para la sección de cursos */
+    .courses-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+
+    .courses-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .course-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .course-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .course-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .course-category {
+      display: inline-block;
+      background: rgba(44, 77, 144, 0.1);
+      color: var(--primary-color);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .course-title {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .course-description {
+      margin-bottom: 20px;
+      color: #666;
+      flex-grow: 1;
+    }
+
+    .course-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .course-price {
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+
+    .course-duration {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .btn-enroll {
+      display: inline-block;
+      padding: 10px 25px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .btn-enroll:hover {
+      background: var(--dark-blue);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .back-to-top:hover {
+      background-color: var(--dark-blue);
+      transform: translateY(-3px);
+    }
+
+    .course-details-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .course-features {
+      margin: 30px 0;
+    }
+
+    .course-features li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .course-features i {
+      color: var(--primary-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+
+    /* Pestañas de información del curso */
+    .course-tabs {
+      margin-top: 30px;
+    }
+
+    .course-tabs .nav-link {
+      color: var(--text-color);
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+    }
+
+    .course-tabs .nav-link.active {
+      color: var(--primary-color);
+      border-bottom: 3px solid var(--primary-color);
+      background: transparent;
+    }
+
+    .tab-content {
+      padding: 20px 0;
+    }
+
+    /* Estilos específicos solo para la sección de testimonios */
+    .testimonials-section {
+      background: linear-gradient(135deg, #1a365d 0%, #2c4d90 100%);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .testimonials-section::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255, 107, 107, 0.1);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .testimonials-section::after {
+      content: "";
+      position: absolute;
+      bottom: -80px;
+      right: -80px;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 107, 107, 0.08);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .testimonials-section .section-subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: #ff6b6b;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+    
+    .testimonials-section .section-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .testimonials-section .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: #ff6b6b;
+      border-radius: 2px;
+    }
+    
+    .testimonials-section .section-description {
+      max-width: 700px;
+      margin: 30px auto 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      font-weight: 300;
+      line-height: 1.7;
+    }
+    
+    .testimonials-section .testimonial-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+      padding: 40px;
+      transition: all 0.4s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(44, 77, 144, 0.1);
+      z-index: 1;
+    }
+    
+    .testimonials-section .testimonial-card:hover {
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+      border-color: rgba(44, 77, 144, 0.3);
+    }
+    
+    .testimonials-section .quote-icon {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 5rem;
+      color: rgba(44, 77, 144, 0.05);
+      z-index: 0;
+    }
+    
+    .testimonials-section .testimonial-content {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .testimonials-section .testimonial-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 25px;
+      position: relative;
+      padding-left: 25px;
+      font-weight: 400;
+    }
+    
+    .testimonials-section .testimonial-text::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: #ff6b6b;
+      border-radius: 10px;
+    }
+    
+    .testimonials-section .testimonial-author {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+    
+    .testimonials-section .author-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      margin-right: 20px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    
+    .testimonials-section .author-image::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 2px solid #ff6b6b;
+      border-radius: 50%;
+      padding: 2px;
+    }
+    
+    .testimonials-section .author-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .testimonials-section .author-info {
+      flex-grow: 1;
+    }
+    
+    .testimonials-section .author-name {
+      font-weight: 700;
+      font-size: 1.3rem;
       color: #2c4d90;
-      font-weight: bold;
+      margin-bottom: 5px;
     }
-    .form-control {
-      border: 2px solid #2c4d90;
+    
+    .testimonials-section .author-details {
+      color: #6c757d;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    
+    .testimonials-section .author-details span {
+      color: #ff6b6b;
+      font-weight: 600;
+    }
+    
+    .testimonials-section .rating {
+      display: flex;
+      gap: 3px;
+    }
+    
+    .testimonials-section .rating i {
+      color: #ff6b6b;
+      font-size: 1.1rem;
+    }
+    
+    /* Controles específicos para esta sección */
+    .testimonials-section .carousel-control-prev, 
+    .testimonials-section .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #a5a5a5;
+      opacity: 0.7;
+      top: 50%;
+      transform: translateY(-50%);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    
+    .testimonials-section .carousel-control-prev {
+      left: 150px;
+    }
+    
+    .testimonials-section .carousel-control-next {
+      right: 150px;
+    }
+    
+    .testimonials-section .carousel-control-prev:hover, 
+    .testimonials-section .carousel-control-next:hover {
+      background: #ff6b6b;
+    }
+    
+    .testimonials-section .carousel-control-prev:hover .carousel-control-prev-icon,
+    .testimonials-section .carousel-control-next:hover .carousel-control-next-icon {
+      filter: invert(0); /* Íconos negros sobre fondo blanco en hover */
+    }
+    
+    .testimonials-section .carousel-indicators {
+      bottom: -60px;
+    }
+    
+    .testimonials-section .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      margin: 0 6px;
+      transition: all 0.3s ease;
+    }
+    
+    .testimonials-section .carousel-indicators .active {
+      background-color: white;
+      transform: scale(1.3);
+    }
+    
+    @media (max-width: 992px) {
+      .testimonials-section .section-title {
+        font-size: 2.4rem;
+      }
+      
+      .testimonials-section .testimonial-card {
+        padding: 30px;
+      }
+      
+      .testimonials-section .carousel-control-prev {
+        left: 10px;
+      }
+      
+      .testimonials-section .carousel-control-next {
+        right: 10px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .testimonials-section .section-title {
+        font-size: 2rem;
+      }
+      
+      .testimonials-section .section-subtitle {
+        font-size: 1rem;
+      }
+      
+      .testimonials-section .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .testimonials-section .author-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      
+      .testimonials-section .testimonial-text {
+        padding-left: 15px;
+      }
+      
+      .testimonials-section .testimonial-text::before {
+        width: 3px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .testimonials-section .section-title {
+        font-size: 1.8rem;
+      }
+      
+      .testimonials-section .section-description {
+        font-size: 1rem;
+      }
+      
+      .testimonials-section .testimonial-card {
+        padding: 25px 20px;
+      }
+      
+      .testimonials-section .quote-icon {
+        top: 15px;
+        right: 15px;
+        font-size: 4rem;
+      }
+      
+      .testimonials-section .carousel-control-prev, 
+      .testimonials-section .carousel-control-next {
+        width: 40px;
+        height: 40px;
+      }
     }
 
-    .transition-transform:hover {
-        transform: scale(1.01);
-        transition: transform 0.2s ease;
-    }
-    .card-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #2c4d90;
-    }
-    .embed-responsive {
-        border-radius: 0.5rem;
-        overflow: hidden;
-    }
-    .btn-primary {
-        background: #2c4d90;
-        color: white;
-        border: none;
-        transition: all 0.3s ease;
-    }
-    .btn-primary:hover {
-        background: white;
-        color: #2c4d90;
-        border: 2px solid #2c4d90;
-        cursor: pointer;
-    }
-    hr {
-        width: 95%;
-        display: flex;
-        margin: 0 auto;
-
-    }
-    .carousel-inner img {
-        width: 100%; 
-        height: 735px; 
-        object-fit: cover; 
+    @media (max-width: 768px) {
+      .carousel-item img {
+      height: 50vh;
+      }
+      
+      .accordion-body {
+      flex-direction: column;
+      }
+      
+      .accordion-body img {
+      width: 100% !important;
+      margin-bottom: 1rem;
+      }
+      
+      .section-padding {
+      padding: 3rem 0;
+      }
     }
   </style>
 </head>
