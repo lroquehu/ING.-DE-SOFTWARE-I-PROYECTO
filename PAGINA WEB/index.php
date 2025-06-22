@@ -774,11 +774,73 @@
       </div>
     </div>
   </section>
+
+  <!-- Pie de página -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3 class="text-white mb-4">PRODIGIOS</h3>
+          <p>La academia de música donde descubrirás y desarrollarás tu talento musical con los mejores instructores y metodologías.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/AcademiadeMusicaProdigios" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h4 class="text-white mb-4">Cursos</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#pianoModal">Piano</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#guitarraModal">Guitarra</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#cantoModal">Canto</a></li>
+            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none" data-bs-toggle="modal" data-bs-target="#violinModal">Violín</a></li>
+            <li><a href="#cursos" class="text-white-50 text-decoration-none">Ver todos</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h4 class="text-white mb-4">Enlaces</h4>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#inicio" class="text-white-50 text-decoration-none">Inicio</a></li>
+            <li class="mb-2"><a href="#cursos" class="text-white-50 text-decoration-none">Cursos</a></li>
+            <li class="mb-2"><a href="#instructores" class="text-white-50 text-decoration-none">Instructores</a></li>
+            <li class="mb-2"><a href="#contacto" class="text-white-50 text-decoration-none">Contacto</a></li>
+            <li><a href="#" class="text-white-50 text-decoration-none">Blog</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-lg-4">
+          <h4 class="text-white mb-4">Newsletter</h4>
+          <p>Suscríbete para recibir noticias sobre nuevos cursos, eventos y promociones.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Tu email" aria-label="Tu email" required>
+              <button class="btn btn-primary" type="submit">Suscribirse</button>
+            </div>
+          </form>
+          <small class="text-white-50">Respetamos tu privacidad. Nunca compartiremos tu información.</small>
+        </div>
+      </div>
+      
+      <hr class="my-4 bg-light">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="mb-0">&copy; 2024 Academia de Música PRODIGIOS. Todos los derechos reservados.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-white-50 text-decoration-none me-3">Términos y Condiciones</a>
+          <a href="#" class="text-white-50 text-decoration-none">Política de Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   
-    <!-- Pie de página -->
-    <footer>
-        <p>Academia de Música PRODIGIOS &copy; 2024</p>
-    </footer>
     <!-- Modal Iniciar Sesión -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
