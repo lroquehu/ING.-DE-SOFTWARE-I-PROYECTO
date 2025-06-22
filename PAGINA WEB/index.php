@@ -994,7 +994,7 @@
     </div>
   </div>
 
-   <!-- Modal Instructor 1: Juan Pérez -->
+  <!-- Modal Instructor 1: Juan Pérez -->
   <div class="modal fade" id="instructorModal1" tabindex="-1" aria-labelledby="instructorModal1Label" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
