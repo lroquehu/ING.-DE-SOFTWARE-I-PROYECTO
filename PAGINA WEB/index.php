@@ -994,6 +994,483 @@
     </div>
   </div>
 
+   <!-- Modal Instructor 1: Juan Pérez -->
+  <div class="modal fade" id="instructorModal1" tabindex="-1" aria-labelledby="instructorModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal1Label">Juan Pérez - Instructor de Piano</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructor Juan Pérez" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Piano Clásico</span>
+                <span class="badge bg-primary me-1 mb-1">Jazz</span>
+                <span class="badge bg-primary me-1 mb-1">Composición</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español, Inglés, Francés</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>juan.perez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>Juan Pérez es un pianista con más de 15 años de experiencia en enseñanza y presentaciones en vivo. Graduado del Conservatorio Nacional de Música con honores, ha participado en festivales internacionales en Europa y América.</p>
+              <p>Su método de enseñanza se basa en la técnica clásica adaptada a los intereses y habilidades de cada estudiante, fomentando siempre la creatividad y el amor por la música.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Profesor en Conservatorio Nacional (2015-2020)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Pianista en Orquesta Sinfónica de Lima (2012-2018)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ganador del Concurso Internacional de Piano (2010)</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Lunes</small>
+                      <p class="mb-0">9am - 12pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Miércoles</small>
+                      <p class="mb-0">2pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Viernes</small>
+                      <p class="mb-0">10am - 3pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Sábado</small>
+                      <p class="mb-0">9am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Instructor 2: Ana Gómez -->
+  <div class="modal fade" id="instructorModal2" tabindex="-1" aria-labelledby="instructorModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal2Label">Ana Gómez - Instructora de Canto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructora Ana Gómez" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Técnica Vocal</span>
+                <span class="badge bg-primary me-1 mb-1">Música Contemporánea</span>
+                <span class="badge bg-primary me-1 mb-1">Interpretación</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español, Inglés</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>ana.gomez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>Ana Gómez es una cantante profesional con 10 años de experiencia en enseñanza vocal. Especializada en técnica vocal contemporánea, ha entrenado a cantantes que hoy forman parte de agrupaciones profesionales y han ganado concursos nacionales.</p>
+              <p>Su método de enseñanza se centra en desarrollar una base técnica sólida mientras se explora la expresión artística personal de cada estudiante.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Vocal coach en "La Voz Perú" (2018-2020)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Cantante solista en Orquesta Sinfónica Nacional (2015-2019)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ganadora del Festival de Canto Popular (2014)</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Martes</small>
+                      <p class="mb-0">10am - 2pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Jueves</small>
+                      <p class="mb-0">3pm - 7pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Sábado</small>
+                      <p class="mb-0">9am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Instructor 3: Pedro López -->
+  <div class="modal fade" id="instructorModal3" tabindex="-1" aria-labelledby="instructorModal3Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal3Label">Pedro López - Instructor de Guitarra</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructor Pedro López" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Guitarra Eléctrica</span>
+                <span class="badge bg-primary me-1 mb-1">Blues</span>
+                <span class="badge bg-primary me-1 mb-1">Rock</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español, Inglés</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>pedro.lopez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>Pedro López es un guitarrista profesional con amplia experiencia en géneros como rock, blues y jazz. Ha participado en múltiples giras internacionales y grabado con artistas reconocidos en la escena musical latinoamericana.</p>
+              <p>Su enfoque de enseñanza combina técnica sólida con aplicación práctica, permitiendo a los estudiantes tocar música real desde las primeras clases.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Guitarrista de gira con banda internacional (2017-2020)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Profesor en Berklee College of Music (2014-2016)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ganador del concurso nacional de guitarra (2012)</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Lunes</small>
+                      <p class="mb-0">4pm - 8pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Miércoles</small>
+                      <p class="mb-0">4pm - 8pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Viernes</small>
+                      <p class="mb-0">3pm - 7pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Instructor 4: María Fernández -->
+  <div class="modal fade" id="instructorModal4" tabindex="-1" aria-labelledby="instructorModal4Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal4Label">María Fernández - Instructora de Violín</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructora María Fernández" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Violín Clásico</span>
+                <span class="badge bg-primary me-1 mb-1">Música de Cámara</span>
+                <span class="badge bg-primary me-1 mb-1">Técnica de Arco</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español, Inglés, Francés</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>maria.fernandez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>María Fernández es violinista clásica con formación en el Conservatorio de París. Como miembro de la Orquesta Sinfónica Nacional por más de 8 años, ha actuado en las principales salas de concierto del país y participado en festivales internacionales.</p>
+              <p>Su método de enseñanza enfatiza la técnica correcta desde el inicio, combinada con el desarrollo de la expresión musical personal.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Primera violinista en Orquesta Sinfónica Nacional (2015-presente)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Profesora en Conservatorio Nacional (2012-2015)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ganadora del concurso Jóvenes Solistas (2010)</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Martes</small>
+                      <p class="mb-0">9am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Jueves</small>
+                      <p class="mb-0">9am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Sábado</small>
+                      <p class="mb-0">10am - 2pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Instructor 5: Luisa Rodríguez -->
+  <div class="modal fade" id="instructorModal5" tabindex="-1" aria-labelledby="instructorModal5Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal5Label">Luisa Rodríguez - Instructora de Ukelele</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructora Luisa Rodríguez" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Música Hawaiana</span>
+                <span class="badge bg-primary me-1 mb-1">Fingerstyle</span>
+                <span class="badge bg-primary me-1 mb-1">Enseñanza para Niños</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español, Inglés</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>luisa.rodriguez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>Luisa Rodríguez es especialista en música hawaiana y contemporánea con el ukelele. Con más de 5 años de experiencia enseñando a niños y adultos, ha desarrollado un método único que hace el aprendizaje divertido y efectivo para todas las edades.</p>
+              <p>Su pasión por este instrumento se refleja en su enseñanza dinámica y en la creación de un ambiente de aprendizaje positivo.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Instructora en festivales internacionales de ukelele (2018-presente)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Directora del programa "Ukelele en las Escuelas" (2016-2020)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Artista endorser de marcas reconocidas de ukelele</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Lunes</small>
+                      <p class="mb-0">3pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Miércoles</small>
+                      <p class="mb-0">3pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Viernes</small>
+                      <p class="mb-0">3pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Sábado</small>
+                      <p class="mb-0">10am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Instructor 6: Carlos Méndez -->
+  <div class="modal fade" id="instructorModal6" tabindex="-1" aria-labelledby="instructorModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90;">
+          <h5 class="modal-title" id="instructorModal6Label">Carlos Méndez - Instructor de Requinto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-5 text-center">
+              <img src="img/user.jpg" class="img-fluid rounded-circle mb-4" alt="Instructor Carlos Méndez" loading="lazy" style="width: 200px; height: 200px; object-fit: cover;">
+              <div class="mb-4">
+                <h5>Especialidades</h5>
+                <span class="badge bg-primary me-1 mb-1">Música Tradicional</span>
+                <span class="badge bg-primary me-1 mb-1">Técnica de Púa</span>
+                <span class="badge bg-primary me-1 mb-1">Improvisación</span>
+              </div>
+              <div class="mb-4">
+                <h5>Idiomas</h5>
+                <p>Español</p>
+              </div>
+              <div>
+                <h5>Contacto</h5>
+                <p>carlos.mendez@prodigios.edu.pe</p>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <h4 class="mb-3">Biografía</h4>
+              <p>Carlos Méndez es un experto en música tradicional y requinto con más de 15 años de experiencia. Ha participado en festivales internacionales de música folklórica y grabado con importantes agrupaciones de música latinoamericana.</p>
+              <p>Como instructor, se enfoca en transmitir las técnicas tradicionales mientras adapta el instrumento a contextos musicales contemporáneos, manteniendo siempre la esencia del requinto.</p>
+              
+              <h4 class="mb-3 mt-4">Experiencia</h4>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Director musical de "Los Tradicionales" (2010-presente)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ganador del Festival Internacional del Requinto (2015, 2018)</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Compositor de más de 50 obras para requinto</li>
+              </ul>
+              
+              <h4 class="mb-3 mt-4">Horarios Disponibles</h4>
+              <div class="row">
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Martes</small>
+                      <p class="mb-0">2pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Jueves</small>
+                      <p class="mb-0">2pm - 6pm</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mb-2">
+                  <div class="card bg-light">
+                    <div class="card-body p-2 text-center">
+                      <small>Sábado</small>
+                      <p class="mb-0">9am - 1pm</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Inscribirme con este instructor</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Modal Mensaje -->
     <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
