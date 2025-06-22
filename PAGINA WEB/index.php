@@ -360,77 +360,115 @@
     </div>
   </section>
 
-    <!-- Sección de Instructores -->
-    <section id="instructores" class="container my-5">
-        <h2 class="text-center mb-4">Nuestros Instructores</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card text-center shadow border-0 transition-transform">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="img/user.jpg" alt="Juan Pérez" class="img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
-                        </div>
-                        <h3 class="card-title">Juan Pérez</h3>
-                        <p class="card-text"><strong>Instrumento:</strong> Piano</p>
-                        <p class="card-text">Juan es un pianista con más de 10 años de experiencia enseñando a jóvenes y adultos.</p>
-                    </div>
-                </div>
+  <!-- Sección de Instructores -->
+  <section id="instructores" class="section-padding">
+    <div class="container">
+      <h2 class="text-center mb-5">Nuestros Instructores</h2>
+      <div class="row g-4">
+        
+        <!-- Instructor 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructor Juan Pérez" loading="lazy">
+              <h3 class="card-title">Juan Pérez</h3>
+              <p class="text-muted"><i class="fas fa-piano me-2"></i> Piano</p>
+              <p class="card-text">Pianista con más de 15 años de experiencia en enseñanza y presentaciones en vivo. Graduado del Conservatorio Nacional de Música.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal1">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
             </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card text-center shadow border-0 transition-transform">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="img/user.jpg" alt="Ana Gómez" class="img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
-                        </div>
-                        <h3 class="card-title">Ana Gómez</h3>
-                        <p class="card-text"><strong>Instrumento:</strong> Canto</p>
-                        <p class="card-text">Ana ha entrenado a cantantes profesionales y aficionados durante más de 8 años.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card text-center shadow border-0 transition-transform">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="img/user.jpg" alt="Pedro López" class="img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
-                        </div>
-                        <h3 class="card-title">Pedro López</h3>
-                        <p class="card-text"><strong>Instrumento:</strong> Guitarra</p>
-                        <p class="card-text">Pedro es un experimentado guitarrista que ha enseñado a estudiantes de todos los niveles.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card text-center shadow border-0 transition-transform">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="img/user.jpg" alt="María Fernández" class="img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
-                        </div>
-                        <h3 class="card-title">María Fernández</h3>
-                        <p class="card-text"><strong>Instrumento:</strong> Violín</p>
-                        <p class="card-text">María es una violinista apasionada que ha trabajado con orquestas juveniles.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card text-center shadow border-0 transition-transform">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <img src="img/user.jpg" alt="Luisa Rodríguez" class="img-fluid rounded-circle border border-primary" style="width: 150px; height: 150px;">
-                        </div>
-                        <h3 class="card-title">Luisa Rodríguez</h3>
-                        <p class="card-text"><strong>Instrumento:</strong> Ukelele</p>
-                        <p class="card-text">Luisa enseña a tocar el ukelele de una manera divertida y accesible.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </section>
-    <hr>
+        
+        <!-- Instructor 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructora Ana Gómez" loading="lazy">
+              <h3 class="card-title">Ana Gómez</h3>
+              <p class="text-muted"><i class="fas fa-microphone me-2"></i> Canto</p>
+              <p class="card-text">Cantante profesional con 10 años de experiencia en enseñanza vocal. Especializada en técnica vocal contemporánea.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal2">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Instructor 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructor Pedro López" loading="lazy">
+              <h3 class="card-title">Pedro López</h3>
+              <p class="text-muted"><i class="fas fa-guitar me-2"></i> Guitarra</p>
+              <p class="card-text">Guitarrista profesional con amplia experiencia en géneros como rock, blues y jazz. Ha participado en múltiples giras internacionales.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal3">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Instructor 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructora María Fernández" loading="lazy">
+              <h3 class="card-title">María Fernández</h3>
+              <p class="text-muted"><i class="fas fa-music me-2"></i> Violín</p>
+              <p class="card-text">Violinista clásica con formación en el extranjero. Miembro de la Orquesta Sinfónica Nacional por más de 8 años.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal4">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Instructor 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructora Luisa Rodríguez" loading="lazy">
+              <h3 class="card-title">Luisa Rodríguez</h3>
+              <p class="text-muted"><i class="fas fa-guitar me-2"></i> Ukelele</p>
+              <p class="card-text">Especialista en música hawaiana y contemporánea con el ukelele. Más de 5 años enseñando a niños y adultos.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal5">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Instructor 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100">
+            <div class="card-body text-center p-4">
+              <img src="img/user.jpg" class="instructor-img rounded-circle mb-4" alt="Instructor Carlos Méndez" loading="lazy">
+              <h3 class="card-title">Carlos Méndez</h3>
+              <p class="text-muted"><i class="fas fa-guitar me-2"></i> Requinto</p>
+              <p class="card-text">Experto en música tradicional y requinto. Ha participado en festivales internacionales de música folklórica.</p>
+              <div class="mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#instructorModal6">Ver perfil</a>
+                <a href="#" class="btn btn-primary btn-sm">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-5">
+        <button class="btn btn-outline-primary">Ver todos los instructores</button>
+      </div>
+    </div>
+  </section>
+  
     <!-- Sección de Contacto -->
     <section id="contacto" class="container my-5">
         <h2 class="text-center mb-4">Contáctanos</h2>
