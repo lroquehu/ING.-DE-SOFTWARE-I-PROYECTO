@@ -197,43 +197,63 @@
       </div>
     </nav>
   </header>
-    <!-- Sección de Carrusel -->
-    <section id="inicio">
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-touch="true" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src="img/image1.jpg" class="d-block w-100" alt="requinto">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/image2.jpg" class="d-block w-100" alt="piano">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/image3.jpg" class="d-block w-100" alt="ukelele">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/image4.jpg" class="d-block w-100" alt="Canto">
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src="img/image5.jpg" class="d-block w-100" alt="guitarra">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+  <!-- Sección de Carrusel -->
+  <section id="inicio" class="mb-5">
+    <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="5000">
+          <img src="img/image1.jpg" class="d-block w-100" alt="Persona tocando requinto" loading="lazy">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Clases de Requinto</h3>
+            <p>Aprende técnicas profesionales con nuestros instructores certificados</p>
+          </div>
         </div>
-    </section>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/image2.jpg" class="d-block w-100" alt="Persona tocando piano" loading="lazy">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Clases de Piano</h3>
+            <p>Desde principiantes hasta niveles avanzados</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/image3.jpg" class="d-block w-100" alt="Persona tocando ukelele" loading="lazy">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Clases de Ukelele</h3>
+            <p>El instrumento perfecto para comenzar en la música</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/image4.jpg" class="d-block w-100" alt="Persona cantando" loading="lazy">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Clases de Canto</h3>
+            <p>Desarrolla tu voz con técnicas profesionales</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="5000">
+          <img src="img/image5.jpg" class="d-block w-100" alt="Persona tocando guitarra" loading="lazy">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Clases de Guitarra</h3>
+            <p>Aprende tus canciones favoritas desde el primer día</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" aria-label="Slide anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" aria-label="Slide siguiente">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </section>
     <!-- Sección de Cursos con Acordeón -->
     <section id="cursos" class="container my-5">
         <h2>Nuestros Cursos</h2>
