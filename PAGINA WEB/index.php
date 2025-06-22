@@ -2096,23 +2096,32 @@
     </div>
   </div>
 
-    <!-- Modal Mensaje -->
-    <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="messageModalLabel">Mensaje</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <?php echo htmlspecialchars($modalMessage); ?>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
-                </div>
-            </div>
+  <!-- Modal Mensaje -->
+  <div class="modal fade course-modal" id="messageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mensaje</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        <div class="modal-body">
+          <p><?php echo htmlspecialchars($modalMessage); ?></p>
+          
+          <?php if(isset($_SESSION['password_errors'])): ?>
+            <ul class="mt-3">
+              <?php foreach($_SESSION['password_errors'] as $error): ?>
+                <li><?php echo htmlspecialchars($error); ?></li>
+              <?php endforeach; ?>
+            </ul>
+            <?php unset($_SESSION['password_errors']); ?>
+          <?php endif; ?>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
     </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
