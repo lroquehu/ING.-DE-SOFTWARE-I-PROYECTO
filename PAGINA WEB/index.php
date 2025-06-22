@@ -1472,6 +1472,630 @@
     </div>
   </div>
 
+    <!-- Modal Piano -->
+  <div class="modal fade course-modal" id="pianoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Piano</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/piano.jpg" alt="Curso de piano" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="pianoTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="descripcion-tab" data-bs-toggle="tab" data-bs-target="#piano-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="temario-tab" data-bs-toggle="tab" data-bs-target="#piano-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="instructor-tab" data-bs-toggle="tab" data-bs-target="#piano-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="pianoTabContent">
+              <div class="tab-pane fade show active" id="piano-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Este curso está diseñado para que aprendas a tocar piano desde cero o para perfeccionar tu técnica si ya tienes conocimientos previos. Trabajaremos en:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Postura correcta y posición de manos</li>
+                  <li><i class="fas fa-check-circle"></i> Lectura de partituras</li>
+                  <li><i class="fas fa-check-circle"></i> Técnicas de digitación</li>
+                  <li><i class="fas fa-check-circle"></i> Teoría musical aplicada</li>
+                  <li><i class="fas fa-check-circle"></i> Repertorio clásico y contemporáneo</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="piano-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <div class="accordion" id="pianoTemarioAccordion">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                        Módulo 1: Fundamentos
+                      </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Conociendo el piano</li>
+                          <li>Posición correcta</li>
+                          <li>Primeros ejercicios</li>
+                          <li>Notas en el pentagrama</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        Módulo 2: Técnica Básica
+                      </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Escalas mayores y menores</li>
+                          <li>Acordes básicos</li>
+                          <li>Ejercicios de independencia</li>
+                          <li>Primeras piezas musicales</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Módulo 3: Repertorio
+                      </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Piezas clásicas sencillas</li>
+                          <li>Música popular</li>
+                          <li>Improvisación básica</li>
+                          <li>Preparación para presentación</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="piano-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructor Juan Pérez" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>Juan Pérez</h5>
+                    <p class="text-muted">Instructor de Piano</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre el instructor</h4>
+                    <p>Juan es un pianista con más de 15 años de experiencia en enseñanza y presentaciones en vivo. Graduado del Conservatorio Nacional de Música con honores, ha participado en festivales internacionales en Europa y América.</p>
+                    <p>Su método de enseñanza se basa en la técnica clásica adaptada a los intereses y habilidades de cada estudiante, fomentando siempre la creatividad y el amor por la música.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Piano Clásico</span>
+                      <span class="badge bg-primary me-1">Jazz</span>
+                      <span class="badge bg-primary me-1">Improvisación</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Guitarra -->
+  <div class="modal fade course-modal" id="guitarraModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Guitarra</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/guitarra.jpg" alt="Curso de guitarra" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="guitarraTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="guitarra-descripcion-tab" data-bs-toggle="tab" data-bs-target="#guitarra-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="guitarra-temario-tab" data-bs-toggle="tab" data-bs-target="#guitarra-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="guitarra-instructor-tab" data-bs-toggle="tab" data-bs-target="#guitarra-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="guitarraTabContent">
+              <div class="tab-pane fade show active" id="guitarra-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Aprende a tocar guitarra desde cero o mejora tu técnica con nuestro curso completo que cubre todos los estilos:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Acordes básicos y avanzados</li>
+                  <li><i class="fas fa-check-circle"></i> Técnicas de rasgueo y punteo</li>
+                  <li><i class="fas fa-check-circle"></i> Escalas y teoría aplicada</li>
+                  <li><i class="fas fa-check-circle"></i> Improvisación</li>
+                  <li><i class="fas fa-check-circle"></i> Mantenimiento del instrumento</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="guitarra-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <p>El curso se divide en 4 módulos progresivos que te llevarán desde lo más básico hasta técnicas avanzadas:</p>
+                <ol>
+                  <li><strong>Introducción a la guitarra:</strong> Partes del instrumento, afinación, primeros acordes</li>
+                  <li><strong>Técnica básica:</strong> Rasgueos, cambios de acordes, canciones sencillas</li>
+                  <li><strong>Desarrollo musical:</strong> Escalas, arpegios, teoría aplicada</li>
+                  <li><strong>Estilos y repertorio:</strong> Rock, blues, folk, fingerstyle</li>
+                </ol>
+              </div>
+              <div class="tab-pane fade" id="guitarra-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructor Pedro López" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>Pedro López</h5>
+                    <p class="text-muted">Instructor de Guitarra</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre el instructor</h4>
+                    <p>Pedro es un guitarrista profesional con amplia experiencia en géneros como rock, blues y jazz. Ha participado en múltiples giras internacionales y grabado con artistas reconocidos.</p>
+                    <p>Su enfoque de enseñanza combina técnica sólida con aplicación práctica, permitiendo a los estudiantes tocar música real desde las primeras clases.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Rock</span>
+                      <span class="badge bg-primary me-1">Blues</span>
+                      <span class="badge bg-primary me-1">Improvisación</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Canto -->
+  <div class="modal fade course-modal" id="cantoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Canto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/canto.jpg" alt="Curso de canto" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="cantoTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="canto-descripcion-tab" data-bs-toggle="tab" data-bs-target="#canto-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="canto-temario-tab" data-bs-toggle="tab" data-bs-target="#canto-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="canto-instructor-tab" data-bs-toggle="tab" data-bs-target="#canto-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="cantoTabContent">
+              <div class="tab-pane fade show active" id="canto-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Descubre y desarrolla tu voz con nuestro curso de canto profesional. Aprenderás:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Técnica vocal correcta</li>
+                  <li><i class="fas fa-check-circle"></i> Respiración diafragmática</li>
+                  <li><i class="fas fa-check-circle"></i> Afinación y rango vocal</li>
+                  <li><i class="fas fa-check-circle"></i> Interpretación y expresión</li>
+                  <li><i class="fas fa-check-circle"></i> Cuidado de la voz</li>
+                </ul>
+                <p>El curso incluye grabaciones profesionales para que puedas escuchar tu progreso.</p>
+              </div>
+              <div class="tab-pane fade" id="canto-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5>Fundamentos</h5>
+                    <ul>
+                      <li>Anatomía de la voz</li>
+                      <li>Ejercicios de respiración</li>
+                      <li>Calentamiento vocal</li>
+                      <li>Postura correcta</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Técnica Vocal</h5>
+                    <ul>
+                      <li>Resonancia y proyección</li>
+                      <li>Extensión del rango vocal</li>
+                      <li>Vibrato y efectos</li>
+                      <li>Estilos musicales</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="canto-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructora Ana Gómez" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>Ana Gómez</h5>
+                    <p class="text-muted">Instructora de Canto</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre la instructora</h4>
+                    <p>Ana es una cantante profesional con 10 años de experiencia en enseñanza vocal. Especializada en técnica vocal contemporánea, ha entrenado a cantantes que hoy forman parte de agrupaciones profesionales.</p>
+                    <p>Su método combina técnica clásica con aplicaciones modernas, adaptándose a las necesidades de cada estudiante.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Técnica Vocal</span>
+                      <span class="badge bg-primary me-1">Interpretación</span>
+                      <span class="badge bg-primary me-1">Música Popular</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Violín -->
+  <div class="modal fade course-modal" id="violinModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Violín</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/violin.jpg" alt="Curso de violín" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="violinTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="violin-descripcion-tab" data-bs-toggle="tab" data-bs-target="#violin-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="violin-temario-tab" data-bs-toggle="tab" data-bs-target="#violin-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="violin-instructor-tab" data-bs-toggle="tab" data-bs-target="#violin-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="violinTabContent">
+              <div class="tab-pane fade show active" id="violin-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Domina el arte del violín con nuestro curso diseñado para todos los niveles. Aprenderás:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Técnica correcta de arco y mano izquierda</li>
+                  <li><i class="fas fa-check-circle"></i> Afinación y postura profesional</li>
+                  <li><i class="fas fa-check-circle"></i> Vibrato y expresividad musical</li>
+                  <li><i class="fas fa-check-circle"></i> Repertorio clásico y moderno</li>
+                  <li><i class="fas fa-check-circle"></i> Lectura de partituras para violín</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="violin-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <div class="accordion" id="violinTemarioAccordion">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="violinHeadingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#violinCollapseOne" aria-expanded="true">
+                        Módulo 1: Fundamentos
+                      </button>
+                    </h3>
+                    <div id="violinCollapseOne" class="accordion-collapse collapse show" aria-labelledby="violinHeadingOne">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Partes del violín y cuidado</li>
+                          <li>Sujeción correcta del arco</li>
+                          <li>Posición de manos y cuerpo</li>
+                          <li>Primeras notas y escalas</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="violinHeadingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#violinCollapseTwo">
+                        Módulo 2: Técnica Intermedia
+                      </button>
+                    </h3>
+                    <div id="violinCollapseTwo" class="accordion-collapse collapse" aria-labelledby="violinHeadingTwo">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Cambios de posición</li>
+                          <li>Doble cuerdas y acordes</li>
+                          <li>Técnicas de arco: legato, staccato</li>
+                          <li>Piezas clásicas nivel intermedio</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="violinHeadingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#violinCollapseThree">
+                        Módulo 3: Avanzado y Estilos
+                      </button>
+                    </h3>
+                    <div id="violinCollapseThree" class="accordion-collapse collapse" aria-labelledby="violinHeadingThree">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Vibrato y expresividad avanzada</li>
+                          <li>Música folklórica y contemporánea</li>
+                          <li>Improvisación</li>
+                          <li>Preparación para conciertos</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="violin-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructora María Fernández" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>María Fernández</h5>
+                    <p class="text-muted">Instructora de Violín</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre la instructora</h4>
+                    <p>María es violinista clásica con formación en el extranjero y miembro de la Orquesta Sinfónica Nacional por más de 8 años. Su experiencia incluye participación en festivales internacionales y grabaciones profesionales.</p>
+                    <p>Su método de enseñanza combina la técnica clásica con un enfoque moderno y accesible para estudiantes de todos los niveles.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Violín Clásico</span>
+                      <span class="badge bg-primary me-1">Técnica de Arco</span>
+                      <span class="badge bg-primary me-1">Música de Cámara</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Ukelele -->
+  <div class="modal fade course-modal" id="ukeleleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Ukelele</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/ukelele.jpg" alt="Curso de ukelele" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="ukeleleTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="ukelele-descripcion-tab" data-bs-toggle="tab" data-bs-target="#ukelele-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ukelele-temario-tab" data-bs-toggle="tab" data-bs-target="#ukelele-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="ukelele-instructor-tab" data-bs-toggle="tab" data-bs-target="#ukelele-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="ukeleleTabContent">
+              <div class="tab-pane fade show active" id="ukelele-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Disfruta aprendiendo música con el ukelele, el instrumento perfecto para principiantes. En este curso aprenderás:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Afinación y primeros acordes</li>
+                  <li><i class="fas fa-check-circle"></i> Ritmos y patrones de rasgueo</li>
+                  <li><i class="fas fa-check-circle"></i> Técnicas de fingerpicking</li>
+                  <li><i class="fas fa-check-circle"></i> Canciones populares y hawaianas</li>
+                  <li><i class="fas fa-check-circle"></i> Mantenimiento básico del instrumento</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="ukelele-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5>Básico</h5>
+                    <ul>
+                      <li>Conociendo tu ukelele</li>
+                      <li>Acordes mayores y menores</li>
+                      <li>Rasgueos básicos</li>
+                      <li>Primeras canciones</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Intermedio</h5>
+                    <ul>
+                      <li>Acordes de séptima</li>
+                      <li>Patrones rítmicos complejos</li>
+                      <li>Introducción al fingerstyle</li>
+                      <li>Transposición de canciones</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h5>Avanzado</h5>
+                    <ul>
+                      <li>Técnicas solistas</li>
+                      <li>Improvisación</li>
+                      <li>Música hawaiana tradicional</li>
+                      <li>Composición propia</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="ukelele-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructora Luisa Rodríguez" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>Luisa Rodríguez</h5>
+                    <p class="text-muted">Instructora de Ukelele</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre la instructora</h4>
+                    <p>Luisa es especialista en música hawaiana y contemporánea con el ukelele. Con más de 5 años de experiencia enseñando a niños y adultos, ha desarrollado un método único que hace el aprendizaje divertido y efectivo.</p>
+                    <p>Su enfoque pedagógico se centra en la práctica inmediata y el disfrute de la música desde la primera clase.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Música Hawaiana</span>
+                      <span class="badge bg-primary me-1">Fingerstyle</span>
+                      <span class="badge bg-primary me-1">Enseñanza para Niños</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Requinto -->
+  <div class="modal fade course-modal" id="requintoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Curso de Requinto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="img/requinto.jpg" alt="Curso de requinto" class="course-details-img">
+          
+          <div class="course-tabs">
+            <ul class="nav nav-tabs" id="requintoTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="requinto-descripcion-tab" data-bs-toggle="tab" data-bs-target="#requinto-descripcion" type="button" role="tab">Descripción</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="requinto-temario-tab" data-bs-toggle="tab" data-bs-target="#requinto-temario" type="button" role="tab">Temario</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="requinto-instructor-tab" data-bs-toggle="tab" data-bs-target="#requinto-instructor" type="button" role="tab">Instructor</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="requintoTabContent">
+              <div class="tab-pane fade show active" id="requinto-descripcion" role="tabpanel">
+                <h4>Descripción del Curso</h4>
+                <p>Domina este instrumento melódico esencial en la música tradicional latinoamericana. En este curso aprenderás:</p>
+                <ul class="course-features">
+                  <li><i class="fas fa-check-circle"></i> Técnica de púa y digitación</li>
+                  <li><i class="fas fa-check-circle"></i> Escalas y melodías tradicionales</li>
+                  <li><i class="fas fa-check-circle"></i> Acompañamiento en diferentes ritmos</li>
+                  <li><i class="fas fa-check-circle"></i> Improvisación melódica</li>
+                  <li><i class="fas fa-check-circle"></i> Mantenimiento del instrumento</li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="requinto-temario" role="tabpanel">
+                <h4>Temario del Curso</h4>
+                <div class="accordion" id="requintoTemarioAccordion">
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="requintoHeadingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#requintoCollapseOne" aria-expanded="true">
+                        Fundamentos del Requinto
+                      </button>
+                    </h3>
+                    <div id="requintoCollapseOne" class="accordion-collapse collapse show" aria-labelledby="requintoHeadingOne">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Diferencias con la guitarra</li>
+                          <li>Afinación y postura</li>
+                          <li>Escalas básicas</li>
+                          <li>Primeras melodías</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="requintoHeadingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#requintoCollapseTwo">
+                        Técnica Intermedia
+                      </button>
+                    </h3>
+                    <div id="requintoCollapseTwo" class="accordion-collapse collapse" aria-labelledby="requintoHeadingTwo">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Melodías tradicionales</li>
+                          <li>Técnicas de púa avanzada</li>
+                          <li>Armonización básica</li>
+                          <li>Ritmos latinoamericanos</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h3 class="accordion-header" id="requintoHeadingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#requintoCollapseThree">
+                        Avanzado y Estilos
+                      </button>
+                    </h3>
+                    <div id="requintoCollapseThree" class="accordion-collapse collapse" aria-labelledby="requintoHeadingThree">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>Improvisación melódica</li>
+                          <li>Técnicas solistas</li>
+                          <li>Composición para requinto</li>
+                          <li>Repertorio avanzado</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="requinto-instructor" role="tabpanel">
+                <div class="row align-items-center">
+                  <div class="col-md-4 text-center">
+                    <img src="img/user.jpg" alt="Instructor Carlos Méndez" class="img-fluid rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h5>Carlos Méndez</h5>
+                    <p class="text-muted">Instructor de Requinto</p>
+                  </div>
+                  <div class="col-md-8">
+                    <h4>Sobre el instructor</h4>
+                    <p>Carlos es un experto en música tradicional y requinto con más de 15 años de experiencia. Ha participado en festivales internacionales de música folklórica y grabado con importantes agrupaciones de música latinoamericana.</p>
+                    <p>Su enseñanza se centra en preservar las técnicas tradicionales mientras adapta el instrumento a contextos musicales contemporáneos.</p>
+                    <div class="mt-3">
+                      <span class="badge bg-primary me-1">Música Tradicional</span>
+                      <span class="badge bg-primary me-1">Técnica de Púa</span>
+                      <span class="badge bg-primary me-1">Improvisación</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalRegistro">Inscribirse al Curso</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
     <!-- Modal Mensaje -->
     <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
