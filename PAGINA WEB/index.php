@@ -840,7 +840,12 @@
     </div>
   </footer>
 
-  
+  <!-- Botón para volver arriba -->
+  <a href="#" class="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+
     <!-- Modal Iniciar Sesión -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
