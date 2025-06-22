@@ -197,6 +197,7 @@
       </div>
     </nav>
   </header>
+
   <!-- Sección de Carrusel -->
   <section id="inicio" class="mb-5">
     <div id="mainCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -254,129 +255,111 @@
       </button>
     </div>
   </section>
-    <!-- Sección de Cursos con Acordeón -->
-    <section id="cursos" class="container my-5">
-        <h2>Nuestros Cursos</h2>
-        <div class="accordion accordion-flush" id="accordionCursos">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingPiano">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapsePiano">Piano</button>
-                </h2>
-                <div id="collapsePiano" class="accordion-collapse collapse show" aria-labelledby="headingPiano" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/piano.jpg" class="me-3" style="width: 400px;" alt="Imagen Piano">
-                        <div class="text-center">
-                            <h3>Aprende Piano</h3>
-                            <p>Descubre el arte de tocar el piano, un instrumento fundamental en la música. Nuestros cursos están diseñados para todos los niveles, desde principiantes hasta avanzados. A través de una metodología práctica y divertida, aprenderás desde las bases hasta técnicas complejas, permitiéndote expresar tu creatividad musical y disfrutar de la música de manera plena.</p>
-                            <p>Además de aprender a tocar, profundizarás en la teoría musical, la lectura de partituras y la interpretación de diferentes estilos musicales. Nuestros instructores están comprometidos a guiarte en cada paso de tu viaje musical.</p>
 
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingGuitarra">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseGuitarra">Guitarra</button>
-                </h2>
-                <div id="collapseGuitarra" class="accordion-collapse collapse show" aria-labelledby="headingGuitarra" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/guitarra.jpg" class="me-3" style="width: 400px;" alt="Imagen Guitarra">
-                        <div class="text-center">
-                            <h3>Clases de Guitarra</h3>
-                            <p>La guitarra es un instrumento versátil y popular en todos los géneros musicales. Nuestras clases están diseñadas para guiarte desde los acordes básicos hasta solos complejos. Aprenderás a tocar tus canciones favoritas, a mejorar tu técnica y a desarrollar tu propio estilo musical.</p>
-                            <p>Además, tendrás la oportunidad de colaborar con otros músicos, participar en presentaciones y disfrutar de un ambiente creativo y motivador. Nuestros instructores experimentados te ayudarán a alcanzar tus metas musicales.</p>
-
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingCanto">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseCanto">Canto</button>
-                </h2>
-                <div id="collapseCanto" class="accordion-collapse collapse show" aria-labelledby="headingCanto" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/canto.jpg" class="me-3" style="width: 400px;" alt="Imagen Canto">
-                        <div class="text-center">
-                            <h3>Clases de Canto</h3>
-                            <p>¿Te apasiona cantar? Nuestras clases de canto están diseñadas para ayudarte a desarrollar tu voz y técnica vocal. Trabajamos en la proyección de la voz, el control de la respiración y la interpretación musical. Desde baladas hasta pop, mejorarás tu habilidad para cantar con confianza y estilo.</p>
-                            <p>Además, aprenderás a interpretar canciones con emoción y a manejar diferentes estilos. Nuestras sesiones están diseñadas para que cada alumno desarrolle su propio estilo y se sienta seguro en el escenario.</p>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingViolin">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseViolin">Violin</button>
-                </h2>
-                <div id="collapseViolin" class="accordion-collapse collapse show" aria-labelledby="headingViolin" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/violin.jpg" class="me-3" style="width: 400px;" alt="Imagen Violín">
-                        <div class="text-center">
-                            <h3>Clases de Violín</h3>
-                            <p>El violín es un instrumento que destaca en la música clásica y contemporánea. Con nuestras clases, aprenderás desde la postura correcta hasta técnicas avanzadas de interpretación. Nuestros instructores te guiarán a través de un viaje musical, ayudándote a dominar el violín y a disfrutar de la música en su forma más pura.</p>
-                            <p>Desarrollarás habilidades para tocar en orquestas y grupos musicales, así como para la interpretación solista. ¡Ven y vive la experiencia musical única que el violín puede ofrecerte!</p>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingUkelele">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseUkelele">Ukelele</button>
-                </h2>
-                <div id="collapseUkelele" class="accordion-collapse collapse show" aria-labelledby="headingUkelele" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/ukelele.jpg" class="me-3" style="width: 400px;" alt="Imagen Ukelele">
-                        <div class="text-center">
-                            <h3>Clases de Ukelele</h3>
-                            <p>El ukelele es un instrumento alegre y accesible para todos. En nuestras clases, aprenderás a tocar acordes y canciones de forma divertida. Te enseñaremos desde los fundamentos hasta técnicas avanzadas para que puedas tocar en cualquier ocasión.</p>
-                            <p>Las clases son dinámicas y adaptadas a tus necesidades, fomentando la creatividad y la improvisación. ¡No hay mejor momento que ahora para empezar a disfrutar de la música con el ukelele!</p>
-
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingRequinto">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapseRequinto">Requinto</button>
-                </h2>
-                <div id="collapseRequinto" class="accordion-collapse collapse show" aria-labelledby="headingRequinto" data-bs-parent="#accordionCursos">
-                    <div class="accordion-body d-flex">
-                        <img src="img/requinto.jpg" class="me-3" style="width: 400px;" alt="Imagen Requinto">
-                        <div class="text-center">
-                            <h3>Clases de Requinto</h3>
-                            <p>El requinto es un instrumento melódico que añade un sabor especial a cualquier estilo musical. En nuestras clases, aprenderás técnicas específicas para tocar el requinto, incluyendo arpegios, acordes y solos. Nuestros instructores experimentados te ayudarán a perfeccionar tu técnica y a explorar la riqueza de este instrumento.</p>
-                            <p>Además, tendrás la oportunidad de tocar con otros músicos y participar en presentaciones, lo que enriquecerá tu experiencia de aprendizaje y te permitirá disfrutar de la música de una manera única.</p>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Sección de Cursos -->
+  <section id="cursos" class="section-padding bg-light courses-section">
+    <div class="container">
+      <h2 class="text-center mb-5">Nuestros Cursos</h2>
+        <!-- Filtros de cursos -->
+        <div class="course-filter">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="piano">Piano</button>
+          <button class="filter-btn" data-filter="guitarra">Guitarra</button>
+          <button class="filter-btn" data-filter="canto">Canto</button>
+          <button class="filter-btn" data-filter="violin">Violín</button>
+          <button class="filter-btn" data-filter="ukelele">Ukelele</button>
+          <button class="filter-btn" data-filter="requinto">Requinto</button>
         </div>
-    </section>
-    <hr>
+        <!-- Grid de cursos -->
+        <div class="courses-container">
+          <!-- Curso de Piano -->
+          <div class="course-card" data-category="piano">
+            <img src="img/piano.jpg" alt="Clases de piano" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Piano</span>
+            <h3 class="course-title">Piano para Principiantes</h3>
+            <p class="course-description">Aprende las bases del piano y desarrolla tu técnica con nuestro método progresivo.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 120</span>
+              <span class="course-duration">12 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#pianoModal">Más información</a>
+            </div>
+          </div>
+          <!-- Curso de Guitarra -->
+          <div class="course-card" data-category="guitarra">
+            <img src="img/guitarra.jpg" alt="Clases de guitarra" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Guitarra</span>
+            <h3 class="course-title">Guitarra Moderna</h3>
+            <p class="course-description">Domina acordes, escalas y técnicas para tocar tus canciones favoritas.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 100</span>
+              <span class="course-duration">8 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#guitarraModal">Más información</a>
+            </div>
+          </div>
+          <!-- Curso de Canto -->
+          <div class="course-card" data-category="canto">
+            <img src="img/canto.jpg" alt="Clases de canto" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Canto</span>
+            <h3 class="course-title">Técnica Vocal</h3>
+            <p class="course-description">Desarrolla tu voz con ejercicios de respiración, afinación y proyección.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 90</span>
+              <span class="course-duration">10 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#cantoModal">Más información</a>
+            </div>
+          </div>
+          <!-- Curso de Violín -->
+          <div class="course-card" data-category="violin">
+            <img src="img/violin.jpg" alt="Clases de violín" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Violín</span>
+            <h3 class="course-title">Violín Clásico</h3>
+            <p class="course-description">Aprende la técnica correcta del violín con repertorio clásico y moderno.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 150</span>
+              <span class="course-duration">12 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#violinModal">Más información</a>
+            </div>
+          </div>
+          <!-- Curso de Ukelele -->
+          <div class="course-card" data-category="ukelele">
+            <img src="img/ukelele.jpg" alt="Clases de ukelele" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Ukelele</span>
+            <h3 class="course-title">Ukelele Divertido</h3>
+            <p class="course-description">El instrumento perfecto para comenzar en la música de forma alegre.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 80</span>
+              <span class="course-duration">8 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#ukeleleModal">Más información</a>
+            </div>
+          </div>
+          <!-- Curso de Requinto -->
+          <div class="course-card" data-category="requinto">
+            <img src="img/requinto.jpg" alt="Clases de requinto" class="course-img">
+            <div class="course-content">
+            <span class="course-category">Requinto</span>
+            <h3 class="course-title">Requinto Tradicional</h3>
+            <p class="course-description">Domina este instrumento melódico esencial en la música tradicional.</p>
+            <div class="course-meta">
+              <span class="course-price">S/. 110</span>
+              <span class="course-duration">10 clases</span>
+            </div>
+            <a href="#" class="btn-enroll" data-bs-toggle="modal" data-bs-target="#requintoModal">Más información</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
     <!-- Sección de Instructores -->
     <section id="instructores" class="container my-5">
         <h2 class="text-center mb-4">Nuestros Instructores</h2>
