@@ -840,6 +840,8 @@
                     document.getElementById('costoCurso').value = '';
                     document.getElementById('materialCurso').value = '';
                     $('#registrarCurso').text('Registrar Curso');
+                } else {
+                    alert('Por favor, complete todos los campos antes de registrar.');
                 }
             });
 
@@ -861,6 +863,7 @@
             $('#tablaDinamicaCurso').on('click', '.btn-delete', function () {
                 const row = $(this).closest('tr');
                 $('#tablaDinamicaCurso').DataTable().row(row).remove().draw();
+                alert('Eliminado Exitosamente')
             });
 
             initializeDataTableCurso();

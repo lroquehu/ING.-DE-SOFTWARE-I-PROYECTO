@@ -134,12 +134,7 @@
     .form-control {
       border: 2px solid #2c4d90;
     }
-    .btn-close {
-      color: white;
-    }
-    .btn-close:hover {
-        color: #fff;
-    }
+
     .transition-transform:hover {
         transform: scale(1.01);
         transition: transform 0.2s ease;
@@ -179,28 +174,29 @@
   </style>
 </head>
 <body>
-    <!-- Encabezado -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">PRODIGIOS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cursos">Cursos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#instructores">Instructores</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    </ul>
-                    <!-- Botones de Iniciar Sesión y Registrarse -->
-                    <button class="btn btn-light mx-2" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</button>
-                    <button class="btn btn-light mx-2" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrarse</button>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <!-- Encabezado -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.php" aria-label="PRODIGIOS - Inicio">PRODIGIOS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio" aria-label="Ir a sección Inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#cursos" aria-label="Ir a sección Cursos">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#instructores" aria-label="Ir a sección Instructores">Instructores</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto" aria-label="Ir a sección Contacto">Contacto</a></li>
+          </ul>
+          <div class="d-flex">
+            <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#modalLogin" aria-label="Abrir modal de inicio de sesión">Iniciar Sesión</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegistro" aria-label="Abrir modal de registro">Registrarse</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
     <!-- Sección de Carrusel -->
     <section id="inicio">
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-touch="true" data-bs-ride="carousel">
@@ -481,23 +477,23 @@
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="" method="post"> 
-                    <div class="mb-3">
-                        <label for="emailLogin" class="form-label">Email:</label>
-                        <input type="email" class="form-control" id="emailLogin" name="emailLogin" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="passwordLogin" class="form-label">Contraseña:</label>
-                        <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                </form>
-            </div>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post"> 
+                        <div class="mb-3">
+                            <label for="emailLogin" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="emailLogin" name="emailLogin" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordLogin" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -529,7 +525,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- Modal Mensaje -->
     <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
