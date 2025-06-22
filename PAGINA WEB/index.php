@@ -468,6 +468,169 @@
       </div>
     </div>
   </section>
+
+  <!-- Sección de Testimonios Premium -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Testimonios</h2>
+      </div>
+
+      <div id="premiumTestimonials" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Testimonio 1 - Piano -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text">Las clases de piano en PRODIGIOS han revolucionado mi aprendizaje. En 6 meses logré dominar piezas de Chopin que nunca pensé posibles. La paciencia de los instructores y su enfoque personalizado son incomparables.</p>
+                    
+                    <div class="testimonial-author">
+                      <div class="author-image">
+                        <img src="img/user.jpg" alt="Sofía Martínez">
+                      </div>
+                      <div class="author-info">
+                        <h3 class="author-name">Sofía Martínez</h3>
+                        <p class="author-details">Estudiante de <span>Piano</span> · 9 meses</p>
+                        <div class="rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 - Guitarra -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text">Como adulto que soñaba con aprender guitarra, pensé que sería imposible. En PRODIGIOS diseñaron un plan adaptado a mi ritmo. Hoy toco mis canciones favoritas y compongo mis propias melodías. ¡Una experiencia transformadora!</p>
+                    
+                    <div class="testimonial-author">
+                      <div class="author-image">
+                        <img src="img/user.jpg" alt="Javier López">
+                      </div>
+                      <div class="author-info">
+                        <h3 class="author-name">Javier López</h3>
+                        <p class="author-details">Estudiante de <span>Guitarra</span> · 1 año</p>
+                        <div class="rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 - Canto -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text">Las clases de canto no solo mejoraron mi técnica vocal, sino que transformaron mi confianza personal. La metodología me ayudó a entender mi rango vocal y prepararme para audiciones. ¡Gané un concurso de talentos gracias a lo aprendido!</p>
+                    
+                    <div class="testimonial-author">
+                      <div class="author-image">
+                        <img src="img/user.jpg" alt="Valeria Ramírez">
+                      </div>
+                      <div class="author-info">
+                        <h3 class="author-name">Valeria Ramírez</h3>
+                        <p class="author-details">Estudiante de <span>Canto</span> · 1.5 años</p>
+                        <div class="rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 4 - Violín -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="testimonial-card">
+                  <div class="quote-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial-content">
+                    <p class="testimonial-text">Cuando comencé con violín a los 35 años pensé que sería demasiado tarde. Mi instructor adaptó las lecciones a mi ritmo y hoy toco en un ensamble local. Las clases personalizadas y el ambiente de apoyo hacen toda la diferencia.</p>
+                    
+                    <div class="testimonial-author">
+                      <div class="author-image">
+                        <img src="img/user.jpg" alt="Carlos Mendoza">
+                      </div>
+                      <div class="author-info">
+                        <h3 class="author-name">Carlos Mendoza</h3>
+                        <p class="author-details">Estudiante de <span>Violín</span> · 1 año</p>
+                        <div class="rating">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles del carrusel - Solo para esta sección -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#premiumTestimonials" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#premiumTestimonials" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+
+        <!-- Indicadores - Solo para esta sección -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#premiumTestimonials" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#premiumTestimonials" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#premiumTestimonials" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#premiumTestimonials" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
   
     <!-- Sección de Contacto -->
     <section id="contacto" class="container my-5">
