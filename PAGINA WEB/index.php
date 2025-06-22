@@ -845,59 +845,156 @@
     <i class="fas fa-arrow-up"></i>
   </a>
 
+  <!-- Modal Iniciar Sesión -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90">
+          <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm" method="post" novalidate>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="loginEmail" name="emailLogin" required>
+              <div class="invalid-feedback">
+                Por favor ingresa un email válido.
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" name="passwordLogin" required>
+              <div class="invalid-feedback">
+                Por favor ingresa tu contraseña.
+              </div>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">Recordarme</label>
+            </div>
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+            <div class="text-center">
+              <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalForgotPassword" data-bs-dismiss="modal">¿Olvidaste tu contraseña?</a>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <p class="mb-0">¿No tienes una cuenta? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalRegistro" data-bs-dismiss="modal">Regístrate</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Modal Iniciar Sesión -->
-    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLoginLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="" method="post"> 
-                        <div class="mb-3">
-                            <label for="emailLogin" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="emailLogin" name="emailLogin" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordLogin" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                    </form>
-                </div>
-            </div>
+  <!-- Modal Registrarse -->
+  <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background:#2c4d90">
+          <h5 class="modal-title" id="modalRegistroLabel">Crear Cuenta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-    </div>
-    <!-- Modal Registrarse -->
-    <div class="modal fade" id="modalRegistro" tabindex="-1" aria-labelledby="modalRegistroLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalRegistroLabel">Registrarse</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body">
+          <form id="registerForm" method="post" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="firstName" name="nombreRegistro" required>
+                <div class="invalid-feedback">
+                  Por favor ingresa tus nombres.
                 </div>
-                <div class="modal-body">
-                    <form action="" method="post"> 
-                        <div class="mb-3">
-                            <label for="nombreRegistro" class="form-label">Nombre Completo:</label>
-                            <input type="text" class="form-control" id="nombreRegistro" name="nombreRegistro" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="emailRegistro" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="emailRegistro" name="emailRegistro" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordRegistro" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="passwordRegistro" name="passwordRegistro" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Registrarse</button>
-                    </form>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="lastName" name="apellidoRegistro" required>
+                <div class="invalid-feedback">
+                  Por favor ingresa tus apellidos.
                 </div>
+              </div>
             </div>
+            
+            <div class="mb-3">
+              <label for="registerEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="registerEmail" name="emailRegistro" required>
+              <div class="invalid-feedback">
+                Por favor ingresa un email válido.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="registerPhone" class="form-label">Teléfono</label>
+              <input type="tel" class="form-control" id="registerPhone" name="telefonoRegistro" required>
+              <div class="invalid-feedback">
+                Por favor ingresa tu número telefónico.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="registerPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="registerPassword" name="passwordRegistro" required>
+              <div class="invalid-feedback">
+                Por favor crea una contraseña.
+              </div>
+            </div>
+            
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+              <input type="password" class="form-control" id="confirmPassword" name="passwordRegistro1" required>
+              <div class="invalid-feedback">
+                Las contraseñas deben coincidir.
+              </div>
+            </div>
+            
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="acceptTerms" required>
+              <label class="form-check-label" for="acceptTerms" style="color: #333;">Acepto los <a href="#" class="text-decoration-none">Términos y Condiciones</a> y la <a href="#" class="text-decoration-none">Política de Privacidad</a></label>
+              <div class="invalid-feedback">
+                Debes aceptar los términos y condiciones.
+              </div>
+            </div>
+            
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Registrarse</button>
+            </div>
+          </form>
         </div>
+        <div class="modal-footer justify-content-center">
+          <p class="mb-0">¿Ya tienes una cuenta? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalLogin" data-bs-dismiss="modal">Inicia Sesión</a></p>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Modal Recuperar Contraseña -->
+  <div class="modal fade" id="modalForgotPassword" tabindex="-1" aria-labelledby="modalForgotPasswordLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-white" style="background: #2c4d90">
+          <h5 class="modal-title" id="modalForgotPasswordLabel">Recuperar Contraseña</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ingresa tu email y te enviaremos un enlace para restablecer tu contraseña.</p>
+          <form id="forgotPasswordForm" novalidate>
+            <div class="mb-3">
+              <label for="forgotEmail" class="form-label">Email</label>
+              <input type="email" class="form-control" id="forgotEmail" required>
+              <div class="invalid-feedback">
+                Por favor ingresa un email válido.
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">Enviar Enlace</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!-- Modal Mensaje -->
     <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
         <div class="modal-dialog">
