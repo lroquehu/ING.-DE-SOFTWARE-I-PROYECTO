@@ -632,47 +632,149 @@
     </div>
   </section>
   
-    <!-- Sección de Contacto -->
-    <section id="contacto" class="container my-5">
-        <h2 class="text-center mb-4">Contáctanos</h2>
-        <div class="row">
-            <!-- Mapa -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Ubicación</h3>
-                        <div class="embed-responsive embed-responsive-16by9">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15177.273294811263!2d-70.2608680012803!3d-18.010424771399833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sprodigios!5e0!3m2!1ses!2spe!4v1729167504117!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+  <!-- Sección de Contacto -->
+  <section id="contacto" class="section-padding">
+    <div class="container">
+      <h2 class="text-center mb-5">Contáctanos</h2>
+      <div class="row g-4">
+        <!-- Información de Contacto -->
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <h3 class="mb-4">Información de Contacto</h3>
+              
+              <div class="d-flex mb-4">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-map-marker-alt fa-2x"></i>
                 </div>
-            </div>
-
-            <!-- Formulario de Contacto -->
-            <div class="col-md-6 mb-4">
-                <div class="card shadow border-0">
-                    <div class="card-body">
-                        <h3 class="card-title text-center">Formulario de Contacto</h3>
-                        <form>
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre Completo:</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email:</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje:</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Enviar</button>
-                        </form>
-                    </div>
+                <div>
+                  <h5 class="mb-1">Dirección</h5>
+                  <p class="mb-0">LA ESPERANZA, Brasil 1318, Tacna 23001</p>
                 </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-phone-alt fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1">Teléfono</h5>
+                  <p class="mb-0">995522159</p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-envelope fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1">Email</h5>
+                  <p class="mb-0">info@prodigios.edu.pe</p>
+                </div>
+              </div>
+              
+              <div class="d-flex mb-4">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-clock fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="mb-1">Horario de Atención</h5>
+                  <p class="mb-0">Lunes a Viernes: 9am - 8pm<br>Sábados: 9am - 2pm</p>
+                </div>
+              </div>
+              
+              <div class="mt-4">
+                <h5 class="mb-3">Síguenos</h5>
+                <div class="d-flex">
+                  <a href="https://www.facebook.com/AcademiadeMusicaProdigios" target="_blank" class="text-decoration-none me-3" aria-label="Facebook de PRODIGIOS">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none me-3" target="_blank" aria-label="Instagram de PRODIGIOS">
+                    <i class="fab fa-instagram fa-2x"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none me-3" target="_blank" aria-label="YouTube de PRODIGIOS">
+                    <i class="fab fa-youtube fa-2x"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none" target="_blank" aria-label="TikTok de PRODIGIOS">
+                    <i class="fab fa-tiktok fa-2x"></i>
+                  </a>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Mapa -->
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-0">
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d30357.258085875143!2d-70.247902!3d-17.994676!3m2!1i1024!2i768!4f13.1!2m1!1sprodigios!5e0!3m2!1ses!2spe!4v1750286873071!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Formulario de Contacto -->
+        <div class="col-lg-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <h3 class="mb-4">Envíanos un Mensaje</h3>
+              <form id="contactForm" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre Completo</label>
+                  <input type="text" class="form-control" id="name" required>
+                  <div class="invalid-feedback">
+                    Por favor ingresa tu nombre.
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" required>
+                  <div class="invalid-feedback">
+                    Por favor ingresa un email válido.
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Teléfono (Opcional)</label>
+                  <input type="tel" class="form-control" id="phone">
+                </div>
+                
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Asunto</label>
+                  <select class="form-select" id="subject" required>
+                    <option value="" selected disabled>Selecciona un asunto</option>
+                    <option value="informacion">Información sobre cursos</option>
+                    <option value="inscripcion">Inscripciones</option>
+                    <option value="instructores">Información sobre instructores</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Por favor selecciona un asunto.
+                  </div>
+                </div>
+                
+                <div class="mb-3">
+                  <label for="message" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="message" rows="4" required></textarea>
+                  <div class="invalid-feedback">
+                    Por favor escribe tu mensaje.
+                  </div>
+                </div>
+                
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
     <!-- Pie de página -->
     <footer>
         <p>Academia de Música PRODIGIOS &copy; 2024</p>
