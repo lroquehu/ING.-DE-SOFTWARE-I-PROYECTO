@@ -318,6 +318,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .course-filter {
