@@ -6,21 +6,6 @@ $usuario_id = 1;
 $query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = $usuario_id";
 $result = mysqli_query($conn, $query);
 $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono'=>''];
-
-// Guardar cambios
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nombre = $_POST['nombre'];
-    $correo = $_POST['correo'];
-    $telefono = $_POST['telefono'];
-
-    $update = "UPDATE usuarios SET nombre='$nombre', correo='$correo', telefono='$telefono' WHERE id = $usuario_id";
-    mysqli_query($conn, $update);
-
-    // Aquí podrías procesar la imagen más adelante si lo deseas
-
-    header("Location: perfil.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -119,15 +104,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .profile-avatar {
       text-align: center;
       margin-bottom: 20px;
+      position: relative;
     }
 
-    .profile-avatar i {
+    #avatarPreview {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: none;
+      margin: 0 auto 10px;
+    }
+
+    .default-icon {
       font-size: 80px;
       color: #2c3e50;
     }
 
-    .profile-avatar input[type="file"] {
-      margin-top: 10px;
+    .custom-file-input {
+      display: none;
+    }
+
+    .custom-label {
+      background-color: #007bff;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
       display: none;
     }
 
@@ -168,12 +172,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </style>
   <script>
     function enableEdit() {
-      const inputs = document.querySelectorAll("input");
+      const inputs = document.querySelectorAll("input[type='text'], input[type='email']");
       inputs.forEach(input => input.removeAttribute("readonly"));
 
-      const fileInput = document.querySelector("input[type='file']");
-      if (fileInput) fileInput.style.display = "block";
-
+      document.querySelector('.custom-label').style.display = 'inline-block';
       document.querySelector('.save-btn').style.display = 'inline-block';
       document.querySelector('.cancel-btn').style.display = 'inline-block';
       document.querySelector('.edit-btn').style.display = 'none';
@@ -181,6 +183,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     function cancelEdit() {
       window.location.reload();
+    }
+
+    function previewImage(event) {
+      const file = event.target.files[0];
+      const preview = document.getElementById("avatarPreview");
+      const icon = document.querySelector(".default-icon");
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          preview.src = e.target.result;
+          preview.style.display = "block";
+          icon.style.display = "none";
+        };
+        reader.readAsDataURL(file);
+      }
     }
   </script>
 </head>
@@ -205,8 +223,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="profile-card">
         <h2>Mi Perfil</h2>
         <div class="profile-avatar">
-          <i class="fas fa-user-circle"></i><br>
-          <input type="file" name="foto" accept="image/*">
+          <img id="avatarPreview" alt="Vista previa de foto">
+          <i class="fas fa-user-circle default-icon"></i>
+          <br>
+          <label class="custom-label" for="foto">Seleccionar Foto</label>
+          <input type="file" name="foto" id="foto" class="custom-file-input" accept="image/*" onchange="previewImage(event)">
         </div>
         <div class="profile-info">
           <label>Nombre Completo:</label>
