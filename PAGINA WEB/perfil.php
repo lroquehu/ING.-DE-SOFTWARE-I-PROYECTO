@@ -54,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       margin-right: 40px; 
       font-size: 26px;
     }
+
     .profile-icon a {
       color: white;
       text-decoration: none;
@@ -109,8 +110,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     .profile-card h2 {
       color: #2c3e50;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-align: center;
+    }
+
+    .profile-avatar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-avatar i {
+      font-size: 80px;
+      color: #2c3e50;
     }
 
     .profile-info {
@@ -182,6 +193,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <form method="POST">
       <div class="profile-card">
         <h2>Mi Perfil</h2>
+        <div class="profile-avatar">
+          <i class="fas fa-user-circle"></i>
+        </div>
         <div class="profile-info">
           <label>Nombre Completo:</label>
           <input type="text" name="nombre" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
