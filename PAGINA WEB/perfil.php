@@ -70,3 +70,4 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
   <script src="perfil.js"></script>
 </body>
 </html>
+
