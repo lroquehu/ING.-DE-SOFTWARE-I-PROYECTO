@@ -2,12 +2,14 @@
 include("conexion.php");
 $usuario_id = 1; 
 
-// Obtener datos
+// Obtener datos del usuario
 $query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = $usuario_id";
 $result = mysqli_query($conn, $query);
+
 if (!$result) {
     die("Error en la consulta SQL: " . mysqli_error($conn));
 }
+
 $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono'=>''];
 ?>
 <!DOCTYPE html>
