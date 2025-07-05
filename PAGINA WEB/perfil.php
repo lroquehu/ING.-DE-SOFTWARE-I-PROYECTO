@@ -1,16 +1,21 @@
 <?php
 include("conexion.php");
+
+// ID de usuario fijo (luego puedes usar sesión)
 $usuario_id = 1; 
 
-// Obtener datos del usuario
-$query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = $usuario_id";
-$result = mysqli_query($conn, $query);
+// Consulta segura
+$query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
+$stmt = mysqli_prepare($conn, $query);
+mysqli_stmt_bind_param($stmt, "i", $usuario_id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
 if (!$result) {
     die("Error en la consulta SQL: " . mysqli_error($conn));
 }
 
-$usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono'=>''];
+$usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'telefono' => ''];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -47,6 +52,7 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
           <label class="custom-label" for="foto">Seleccionar Foto</label>
           <input type="file" name="foto" id="foto" class="custom-file-input" accept="image/*" onchange="previewImage(event)">
         </div>
+
         <div class="profile-info">
           <label>Nombre Completo:</label>
           <input type="text" name="nombre" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
@@ -59,6 +65,7 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
           <label>Teléfono:</label>
           <input type="text" name="telefono" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
         </div>
+
         <div class="buttons">
           <button type="button" class="edit-btn" onclick="enableEdit()">Editar</button>
           <button type="submit" class="save-btn">Guardar</button>
@@ -70,4 +77,3 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
   <script src="perfil.js"></script>
 </body>
 </html>
-
