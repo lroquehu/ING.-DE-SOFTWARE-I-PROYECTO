@@ -1,11 +1,24 @@
 <?php
 include("conexion.php");
-$usuario_id = 1;
+$usuario_id = 1; 
 
-// Obtener datos desde la base de datos
+// Obtener datos
 $query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = $usuario_id";
 $result = mysqli_query($conn, $query);
 $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono'=>''];
+
+// Guardar cambios
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $correo = $_POST['correo'];
+    $telefono = $_POST['telefono'];
+
+    $update = "UPDATE usuarios SET nombre='$nombre', correo='$correo', telefono='$telefono' WHERE id = $usuario_id";
+    mysqli_query($conn, $update);
+
+    header("Location: perfil.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -37,11 +50,10 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
     }
 
     .profile-icon {
-      margin-left: auto;
-      margin-right: 40px;
+      margin-left: auto;  
+      margin-right: 40px; 
       font-size: 26px;
     }
-
     .profile-icon a {
       color: white;
       text-decoration: none;
@@ -118,7 +130,37 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .buttons button {
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 5px;
+    }
+
+    .edit-btn { background-color: #007bff; color: white; }
+    .cancel-btn { background-color: #6c757d; color: white; display: none; }
+    .save-btn { background-color: #28a745; color: white; display: none; }
   </style>
+  <script>
+    function enableEdit() {
+      const inputs = document.querySelectorAll("input");
+      inputs.forEach(input => input.removeAttribute("readonly"));
+      document.querySelector('.save-btn').style.display = 'inline-block';
+      document.querySelector('.cancel-btn').style.display = 'inline-block';
+      document.querySelector('.edit-btn').style.display = 'none';
+    }
+
+    function cancelEdit() {
+      window.location.reload();
+    }
+  </script>
 </head>
 <body>
   <header class="navbar">
@@ -137,21 +179,28 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono
   </aside>
 
   <main class="main-content">
-    <div class="profile-card">
-      <h2>Mi Perfil</h2>
-      <div class="profile-info">
-        <label>Nombre Completo:</label>
-        <input type="text" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
+    <form method="POST">
+      <div class="profile-card">
+        <h2>Mi Perfil</h2>
+        <div class="profile-info">
+          <label>Nombre Completo:</label>
+          <input type="text" name="nombre" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
+        </div>
+        <div class="profile-info">
+          <label>Correo Electrónico:</label>
+          <input type="email" name="correo" value="<?= htmlspecialchars($usuario['correo']) ?>" readonly>
+        </div>
+        <div class="profile-info">
+          <label>Teléfono:</label>
+          <input type="text" name="telefono" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
+        </div>
+        <div class="buttons">
+          <button type="button" class="edit-btn" onclick="enableEdit()">Editar</button>
+          <button type="submit" class="save-btn">Guardar</button>
+          <button type="button" class="cancel-btn" onclick="cancelEdit()">Cancelar</button>
+        </div>
       </div>
-      <div class="profile-info">
-        <label>Correo Electrónico:</label>
-        <input type="email" value="<?= htmlspecialchars($usuario['correo']) ?>" readonly>
-      </div>
-      <div class="profile-info">
-        <label>Teléfono:</label>
-        <input type="text" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
-      </div>
-    </div>
+    </form>
   </main>
 </body>
 </html>
