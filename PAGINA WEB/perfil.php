@@ -16,6 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $update = "UPDATE usuarios SET nombre='$nombre', correo='$correo', telefono='$telefono' WHERE id = $usuario_id";
     mysqli_query($conn, $update);
 
+    // Aquí podrías procesar la imagen más adelante si lo deseas
+
     header("Location: perfil.php");
     exit;
 }
@@ -124,6 +126,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       color: #2c3e50;
     }
 
+    .profile-avatar input[type="file"] {
+      margin-top: 10px;
+      display: none;
+    }
+
     .profile-info {
       margin-bottom: 15px;
     }
@@ -163,6 +170,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     function enableEdit() {
       const inputs = document.querySelectorAll("input");
       inputs.forEach(input => input.removeAttribute("readonly"));
+
+      const fileInput = document.querySelector("input[type='file']");
+      if (fileInput) fileInput.style.display = "block";
+
       document.querySelector('.save-btn').style.display = 'inline-block';
       document.querySelector('.cancel-btn').style.display = 'inline-block';
       document.querySelector('.edit-btn').style.display = 'none';
@@ -190,11 +201,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </aside>
 
   <main class="main-content">
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
       <div class="profile-card">
         <h2>Mi Perfil</h2>
         <div class="profile-avatar">
-          <i class="fas fa-user-circle"></i>
+          <i class="fas fa-user-circle"></i><br>
+          <input type="file" name="foto" accept="image/*">
         </div>
         <div class="profile-info">
           <label>Nombre Completo:</label>
