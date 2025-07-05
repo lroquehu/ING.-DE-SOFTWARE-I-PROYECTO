@@ -1,10 +1,8 @@
 <?php
 include("conexion.php");
 
-// ID de usuario fijo (luego puedes usar sesión)
-$usuario_id = 1; 
+$usuario_id = 1;
 
-// Consulta segura
 $query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
 $stmt = mysqli_prepare($conn, $query);
 mysqli_stmt_bind_param($stmt, "i", $usuario_id);
@@ -38,6 +36,7 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'tele
     <ul class="menu">
       <li><a href="main.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
       <li><a href="perfil.php"><i class="fa-solid fa-user"></i> Perfil</a></li>
+      <li><a href="configuracion.php"><i class="fa-solid fa-gear"></i> Configuración</a></li>
     </ul>
   </aside>
 
@@ -64,6 +63,11 @@ $usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'tele
         <div class="profile-info">
           <label>Teléfono:</label>
           <input type="text" name="telefono" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
+        </div>
+
+        <div class="profile-info">
+          <label>Biografía:</label>
+          <textarea name="bio" placeholder="Agrega una breve descripción sobre ti..." readonly></textarea>
         </div>
 
         <div class="buttons">
