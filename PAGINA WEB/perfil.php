@@ -1,3 +1,12 @@
+<?php
+include("conexion.php");
+$usuario_id = 1;
+
+// Obtener datos desde la base de datos
+$query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = $usuario_id";
+$result = mysqli_query($conn, $query);
+$usuario = mysqli_fetch_assoc($result) ?? ['nombre'=>'', 'correo'=>'', 'telefono'=>''];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -132,15 +141,15 @@
       <h2>Mi Perfil</h2>
       <div class="profile-info">
         <label>Nombre Completo:</label>
-        <input type="text" readonly>
+        <input type="text" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
       </div>
       <div class="profile-info">
         <label>Correo Electrónico:</label>
-        <input type="email" readonly>
+        <input type="email" value="<?= htmlspecialchars($usuario['correo']) ?>" readonly>
       </div>
       <div class="profile-info">
         <label>Teléfono:</label>
-        <input type="text" readonly>
+        <input type="text" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
       </div>
     </div>
   </main>
