@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>PRODIGIOS</title>
@@ -28,18 +29,23 @@
                 background-color: #ecf0f1;
             }
             /* Navbar */
+           .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 2000; /* más alto que el sidebar o cualquier contenido */
+            }
             .navbar {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                background-color: #2c3e50;
-                color: white;
-                padding: 20px 20px;
-                font-size: 18px;
-                font-weight: bold;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             }
     
             /* Sidebar */
@@ -235,12 +241,39 @@
                 background: #007bff;
                 color: #ffffff;
             }
+            .profile-icon {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 26px;
+            color: white;
+            z-index: 1101;
+            background: transparent;  
+            border: none;              
+            }
+
+            .profile-icon a {
+            color: white;
+            text-decoration: none;
+            }
+
+            .profile-icon a:hover {
+            color: #ffcc00; 
+            }
 
         </style>
     </head>
-    <body>
+<body>
         <!-- Navbar -->
-        <header class="navbar" id="navbar-title">Bienvenido</header>
+        <header class="navbar">
+        <span id="navbar-title">Bienvenido</span>
+        <div class="profile-icon">
+            <a href="perfil.php" title="Mi Perfil">
+            <i class="fas fa-user-circle"></i>
+            </a>
+        </div>
+        </header>
+
         <!-- Sidebar -->
         <aside class="sidebar">
             <h2>PRODIGIOS</h2>
