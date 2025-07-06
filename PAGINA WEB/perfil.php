@@ -11,7 +11,7 @@ mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
 if (!$result) {
-    die("Error en la consulta SQL: " . mysqli_error($conn));
+    die("Error en la consulta SQL: " . mysqli_error($conn)); //Error para saber el error
 }
 
 $usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'telefono' => ''];
