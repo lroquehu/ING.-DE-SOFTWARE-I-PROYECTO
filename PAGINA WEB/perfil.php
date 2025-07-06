@@ -1,34 +1,20 @@
 <?php
-require_once 'conexion.php';
 
-$usuarioId = 1; // ID del usuario a consultar
+include("conexion.php");
 
-$sql = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
-$stmt = mysqli_prepare($conn, $sql);
+$usuario_id = 1;
 
-if (!$stmt) {
-    die("Error al preparar la consulta: " . mysqli_error($conn));
+$query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
+$stmt = mysqli_prepare($conn, $query);
+mysqli_stmt_bind_param($stmt, "i", $usuario_id);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
+
+if (!$result) {
+    die("Error en la consulta SQL: " . mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "i", $usuarioId);
-
-if (!mysqli_stmt_execute($stmt)) {
-    die("Error al ejecutar la consulta: " . mysqli_stmt_error($stmt));
-}
-
-$resultado = mysqli_stmt_get_result($stmt);
-
-if (!$resultado) {
-    die("Error al obtener el resultado: " . mysqli_error($conn));
-}
-$usuario = mysqli_fetch_assoc($resultado);
-$usuario = $usuario ?: [
-    'nombre'   => '',
-    'correo'   => '',
-    'telefono' => ''
-];
-
-mysqli_stmt_close($stmt);
+$usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'telefono' => ''];
 
 ?>
 <!DOCTYPE html>
@@ -52,6 +38,7 @@ mysqli_stmt_close($stmt);
     <ul class="menu">
       <li><a href="main.php"><i class="fa-solid fa-house"></i> Dashboard</a></li>
       <li><a href="perfil.php"><i class="fa-solid fa-user"></i> Perfil</a></li>
+      <li><a href="configuracion.php"><i class="fa-solid fa-gear"></i> Configuración</a></li>
     </ul>
   </aside>
 
@@ -66,6 +53,7 @@ mysqli_stmt_close($stmt);
           <label class="custom-label" for="foto">Seleccionar Foto</label>
           <input type="file" name="foto" id="foto" class="custom-file-input" accept="image/*" onchange="previewImage(event)">
         </div>
+
         <div class="profile-info">
           <label>Nombre Completo:</label>
           <input type="text" name="nombre" value="<?= htmlspecialchars($usuario['nombre']) ?>" readonly>
@@ -78,6 +66,12 @@ mysqli_stmt_close($stmt);
           <label>Teléfono:</label>
           <input type="text" name="telefono" value="<?= htmlspecialchars($usuario['telefono']) ?>" readonly>
         </div>
+
+        <div class="profile-info">
+          <label>Biografía:</label>
+          <textarea name="bio" placeholder="Agrega una breve descripción sobre ti..." readonly></textarea>
+        </div>
+
         <div class="buttons">
           <button type="button" class="edit-btn" onclick="enableEdit()">Editar</button>
           <button type="submit" class="save-btn">Guardar</button>
