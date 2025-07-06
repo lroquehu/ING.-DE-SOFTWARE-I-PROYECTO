@@ -1,20 +1,36 @@
 <?php
+require_once 'conexion.php';
 
-include("conexion.php");
+// ID del usuario a consultar
+$usuarioId = 1;
 
-$usuario_id = 1;
+$sql = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
+$stmt = mysqli_prepare($conn, $sql);
 
-$query = "SELECT nombre, correo, telefono FROM usuarios WHERE id = ?";
-$stmt = mysqli_prepare($conn, $query);
-mysqli_stmt_bind_param($stmt, "i", $usuario_id);
-mysqli_stmt_execute($stmt);
-$result = mysqli_stmt_get_result($stmt);
-
-if (!$result) {
-    die("Error en la consulta SQL: " . mysqli_error($conn));
+if (!$stmt) {
+    die("Error al preparar la consulta: " . mysqli_error($conn));
 }
 
-$usuario = mysqli_fetch_assoc($result) ?? ['nombre' => '', 'correo' => '', 'telefono' => ''];
+mysqli_stmt_bind_param($stmt, "i", $usuarioId);
+
+if (!mysqli_stmt_execute($stmt)) {
+    die("Error al ejecutar la consulta: " . mysqli_stmt_error($stmt));
+}
+
+$resultado = mysqli_stmt_get_result($stmt);
+
+if (!$resultado) {
+    die("Error al obtener el resultado: " . mysqli_error($conn));
+}
+
+$usuario = mysqli_fetch_assoc($resultado);
+$usuario = $usuario ?: [
+    'nombre'   => '',
+    'correo'   => '',
+    'telefono' => ''
+];
+
+mysqli_stmt_close($stmt);
 
 ?>
 <!DOCTYPE html>
