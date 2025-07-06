@@ -1,7 +1,7 @@
 <?php
     $host = "localhost";
     $usuario = "root"; 
-    $contraseña = "";
+    $contraseña = "382004";
     $nombreBaseDeDatos = "escuela_canto";
     
     $conn = new mysqli($host, $usuario, $contraseña, $nombreBaseDeDatos);
