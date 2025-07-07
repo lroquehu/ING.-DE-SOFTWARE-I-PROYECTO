@@ -53,22 +53,30 @@
                     </div>
                 </div>
             </div>
-        </header>        <!-- Sidebar -->
+        </header>        
+        <!-- Sidebar izquierdo -->
         <aside class="sidebar">
-            <h2>PRODIGIOS</h2>
+            
+            <h2><span>PRODIGIOS</span></h2>
+            <div class="profile-section">
+                <img src="src/assets/img/user.jpg" alt="Foto de perfil" class="profile-img">
+                <h4 class="profile-name">Luis Miguel Roque Huacca</h4>
+                <p class="profile-role">Administrador</p>
+            </div>
             <ul class="menu">
-                <li><a href="#" onclick="toggleVisibility('Dashboard',null, 'Dashboard')"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="#" class="active" onclick="toggleVisibility('dashboard', null, 'Dashboard')"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
                 <li>
                     <details>
-                        <summary><i class="fa-solid fa-cogs"></i> Gestión</summary>
+                        <summary><i class="fa-solid fa-pen-to-square"></i><span>Registro</span></summary>
                         <ul class="submenu">
-                            <li><a href="#" onclick="toggleVisibility(null, 'curso', 'Gestión de Cursos')">Gestión de Cursos</a></li>
-                            <li><a href="#" onclick="toggleVisibility(null, 'docente', 'Gestión de Docentes')">Gestión de Docentes</a></li>
-                            <li><a href="#" onclick="toggleVisibility(null, 'estudiante', 'Gestión de Estudiantes')">Gestión de Estudiantes</a></li>
+                            <li><a href="#" onclick="toggleVisibility(null, 'curso', 'Registro de Cursos')"><i class="fa-solid fa-book"></i><span>Registrar Curso</span></a></li>
+                            <li><a href="#" onclick="toggleVisibility(null, 'docente', 'Registro de Docentes')"><i class="fa-solid fa-chalkboard-user"></i><span>Registrar Docente</span></a></li>
+                            <li><a href="#" onclick="toggleVisibility(null, 'estudiante', 'Registro de Estudiantes')"><i class="fa-solid fa-user-graduate"></i><span>Registrar Estudiante</span></a></li>
                         </ul>
                     </details>
                 </li>
-                <li><a href="#" onclick="toggleVisibility('reporte', null, 'Reporte')"><i class="fa-solid fa-chart-pie"></i> Reportes</a></li>
+                <li><a href="#" onclick="toggleVisibility('reporte', null, 'Reportes')"><i class="fa-solid fa-chart-pie"></i><span>Reportes</span></a></li>
+                <li><a href="#" onclick="toggleVisibility('configuracion', null, 'Configuración')"><i class="fa-solid fa-gear"></i><span>Configuración</span></a></li>
             </ul>
         </aside>
         <!-- Panel de subopciones -->
