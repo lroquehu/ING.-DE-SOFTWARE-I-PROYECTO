@@ -950,4 +950,15 @@
             });
         </script>
     </body>
+
+    <body>
+  <div class="mb-3">
+    <label for="inputTest" class="form-label">Campo de prueba (sin impacto)</label>
+    <input type="text" class="form-control is-invalid" id="inputTest" placeholder="Solo validación visual de prueba">
+    <div class="invalid-feedback">
+      Este campo es un ejemplo de validación visual.
+    </div>
+  </div>
+
+  
 </html>
