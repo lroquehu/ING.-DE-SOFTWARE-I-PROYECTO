@@ -83,48 +83,85 @@
         <main class="suboption-panel" id="suboption-panel">
             <!-- Dashboard Section -->
             <div class="dashboard">
-                <h2 class="dashboard-title">Panel de Control</h2>
+                <h2 class="section-title">Panel de Control</h2>
                 <div class="dashboard-cards">
-                    <!-- Tarjetas resumen -->
                     <div class="card">
-                        <h3>Estudiantes Registrados</h3>
+                        <h3><i class="fa-solid fa-user-graduate me-2"></i> Estudiantes Registrados</h3>
                         <p id="total-estudiantes">0</p>
+                        <small>Total en el sistema</small>
                     </div>
                     <div class="card">
-                        <h3>Docentes Activos</h3>
+                        <h3><i class="fa-solid fa-chalkboard-user me-2"></i> Docentes Activos</h3>
                         <p id="total-docentes">0</p>
+                        <small>Enseñando actualmente</small>
                     </div>
                     <div class="card">
-                        <h3>Cursos Disponibles</h3>
+                        <h3><i class="fa-solid fa-book"></i> Cursos Disponibles</h3>
                         <p id="total-cursos">0</p>
+                        <small>Ofertados este semestre</small>
+                    </div>
+                    <div class="card">
+                        <h3><i class="fa-solid fa-calendar-check me-2"></i> Clases Esta Semana</h3>
+                        <p>42</p>
+                        <small>Programadas</small>
                     </div>
                 </div>
-                <!-- Gráfico de distribuciones -->
+                
                 <div class="dashboard-charts">
                     <div class="chart-container">
-                        <h4>Distribución por Niveles (Estudiantes)</h4>
-                        <canvas id="nivelEstudiantesChart"></canvas>
+                        <h4><i class="fa-solid fa-chart-pie"></i> Distribución por Niveles</h4>
+                        <canvas id="nivelEstudiantesChart" height="280"></canvas>
                     </div>
                     <div class="chart-container">
-                        <h4>Distribución de Cursos por Categoría</h4>
-                        <canvas id="categoriaCursosChart"></canvas>
+                        <h4><i class="fa-solid fa-chart-bar"></i> Cursos por Categoría</h4>
+                        <canvas id="categoriaCursosChart" height="280"></canvas>
+                    </div>
+                    <div class="chart-container">
+                        <h4><i class="fa-solid fa-chart-line"></i> Estudiantes por Curso</h4>
+                        <canvas id="estudiantesPorCursoChart" height="280"></canvas>
                     </div>
                 </div>
-                <!-- Tabla de actividades recientes -->
+                
                 <div class="recent-activities">
-                    <h3>Actividades Recientes</h3>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Descripción</th>
-                                <th>Usuario</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla-actividades">
-                            <!-- Las filas se cargarán dinámicamente -->
-                        </tbody>
-                    </table>
+                    <h3><i class="fa-solid fa-clock-rotate-left"></i> Actividades Recientes</h3>
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle ">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Descripción</th>
+                                    <th>Usuario</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-actividades">
+                                <tr>
+                                    <td>2023-11-15</td>
+                                    <td>Nuevo estudiante registrado: María Rodríguez</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>2023-11-14</td>
+                                    <td>Curso de Piano Avanzado creado</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>2023-11-13</td>
+                                    <td>Pago registrado: Carlos Mendoza</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>2023-11-12</td>
+                                    <td>Actualización de horarios</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>2023-11-10</td>
+                                    <td>Nueva docente: Laura Méndez</td>
+                                    <td>Admin</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <!--Estudent section-->
