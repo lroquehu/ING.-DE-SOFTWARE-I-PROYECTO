@@ -168,7 +168,7 @@
             <div class="gestion-estudiante">
                 <!-- Formulario para ingresar datos -->
                 <div class="form-container">
-                    <h3>Registrar Nuevo Estudiante</h3>
+                    <h3 class="section-title">Registrar Nuevo Estudiante</h3>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -251,7 +251,7 @@
             <!--teacher section-->
             <div class="gestion-docente">
                 <div class="form-container ">
-                    <h3>Registrar Nuevo Docente</h3>
+                    <h3 class="section-title">Registrar Nuevo Docente</h3>
                     <div class="row g-3">
                         <div class="col-md-4">
                             <label for="nombreDocente" class="form-label">Nombres</label>
@@ -286,7 +286,7 @@
                             <input type="email" class="form-control" id="contactoDocente" placeholder="Ingrese el correo de contacto" required>
                         </div>
                         <div class="col-md-4">
-                            <label for="salarioDocente" class="form-label">Salario</label>
+                            <label for="salarioDocente" class="form-label">Salario (PEN)</label>
                             <input type="number" class="form-control" id="salarioDocente" placeholder="Ingrese el salario esperado" required>
                         </div>
                     </div>
