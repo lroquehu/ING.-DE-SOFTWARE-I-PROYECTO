@@ -1,0 +1,17 @@
+/*
+.estado {
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.estado-presente {
+    color: var(--success);
+}
+
+.estado-ausente {
+    color: var(--warning);
+}
+
+.estado-pendiente {
+    color: #888;
+}

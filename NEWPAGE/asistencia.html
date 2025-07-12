@@ -9,90 +9,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="cambios.css">
+    <!-- <link rel="stylesheet" href="asistencia.css"> -->
     
-    <style>
-    :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --accent: #ff9900;
-      --light: #ecf0f1;
-      --dark: #2c3e50;
-      --success: #2ecc71;
-      --warning: #f39c12;
-      --info: #1abc9c;
-      --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --transition: all 0.3s ease;
-    }
-
-    body {
-      background-color: var(--light);
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .container-main {
-      margin-top: 40px;
-    }
-
-    .card {
-      border: none;
-      box-shadow: var(--card-shadow);
-    }
-
-    .card-header {
-      background-color: var(--primary);
-      color: white;
-    }
-
-    .table thead {
-      background-color: var(--secondary);
-      color: white;
-    }
-
-    .btn-asistencia {
-      transition: var(--transition);
-      border: none;
-      border-radius: 8px;
-      padding: 6px 12px;
-    }
-
-    .btn-presente {
-      background-color: var(--success);
-      color: white;
-    }
-
-    .btn-ausente {
-      background-color: var(--warning);
-      color: white;
-    }
-
-    .btn-reset {
-      background-color: var(--accent);
-      color: white;
-    }
-
-    .estado {
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-
-    .estado-presente {
-      color: var(--success);
-    }
-
-    .estado-ausente {
-      color: var(--warning);
-    }
-
-    .estado-pendiente {
-      color: #888;
-    }
-
-    .header-actions {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  </style>
     
 </head>
 <body>
@@ -786,49 +704,61 @@
             </div>
 
             <!-- Asistencia -->
-            <div class="asistencia" style="display:none">
-                <div class="card-header">
-                <div class="header-actions">
-                    <h4 class="mb-0">📝 Lista de Asistencia</h4>
-                    <button class="btn btn-sm btn-reset" onclick="resetearTodo()">
-                    <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
-                    </button>
-                </div>
-                </div>
-                <div class="card-body p-0">
-                <table class="table table-hover text-center align-middle mb-0">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Carrera</th>
-                        <th>Asistencia</th>
-                        <th>Estado</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tablaAsistencia">
-                    <tr>
-                        <td>1</td>
-                        <td>Juan Pérez</td>
-                        <td>Ingeniería de Sistemas</td>
-                        <td>
-                        <button class="btn-asistencia btn btn-sm btn-light" onclick="marcar(this, 'presente')">✅</button>
-                        <button class="btn-asistencia btn btn-sm btn-light" onclick="marcar(this, 'ausente')">❌</button>
-                        </td>
-                        <td class="estado estado-pendiente">Sin marcar</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Lucía García</td>
-                        <td>Contabilidad</td>
-                        <td>
-                        <button class="btn-asistencia btn btn-sm btn-light" onclick="marcar(this, 'presente')">✅</button>
-                        <button class="btn-asistencia btn btn-sm btn-light" onclick="marcar(this, 'ausente')">❌</button>
-                        </td>
-                        <td class="estado estado-pendiente">Sin marcar</td>
-                    </tr>
-                    </tbody>
-                </table>
+            <div class="asistencia" style="display: none;">
+                <h2 class="section-title">Lista de Asistencia</h2>
+                <div class="card config-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0">
+                            <h3>Curso: </h3>
+                            <h3>Profesor: </h3>
+                            <h3>Clase: </h3>
+                            <h3>Fecha: </h3>
+                        </h4>
+                        <button class="btn btn-warning btn-sm" onclick="resetearTodo()">
+                            <i class="fa-solid fa-rotate-left"></i> Reiniciar
+                        </button>
+                    </div>
+                    <div class="card-body table-responsive">
+                        <table class="table table-hover align-middle text-center" id="tablaAsistencia">
+                            <thead class="text-white" style="background-color: var(--secondary);">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Codigo</th>
+                                <th>Acciones</th>
+                                <th>Asistencia</th>
+                                <th>Justificación</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Pérez</td>
+                                <td>3004-84355</td>
+                                <td>
+                                    <button class="btn btn-success btn-sm me-1" onclick="marcar(this, 'presente')">  Presente  </button>
+                                    <button class="btn btn-danger btn-sm" onclick="marcar(this, 'ausente')">  Falta  </button>
+                                    <button class="btn btn-warning btn-sm" onclick="marcar(this, 'tardanza')">  Tardanza  </button>
+                                </td>
+                                <td class="estado estado-pendiente">Sin marcar</td>
+                                <td><input type="text" name="" id=""></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lucía García</td>
+                                <td>2033-54534</td>
+                                <td>
+                                    <button class="btn btn-success btn-sm me-1" onclick="marcar(this, 'presente')">  Presente  </button>
+                                    <button class="btn btn-danger btn-sm" onclick="marcar(this, 'ausente')">  Falta  </button>
+                                    <button class="btn btn-warning btn-sm" onclick="marcar(this, 'tardanza')">  Tardanza  </button>
+                                </td>
+                                <td class="estado estado-pendiente">Sin marcar</td>
+                                <td><input type="text" name="" id=""></td>
+                                
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -849,34 +779,13 @@
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="cambios.js"></script>
+    <script src="asistencia.js"></script>
     <!-- <script src="asistencia.js"></script> -->
 
     <!-- Bootstrap Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Script -->
-  <script>
-    function marcar(boton, estado) {
-      const fila = boton.closest("tr");
-      const estadoCelda = fila.querySelector(".estado");
-
-      if (estado === 'presente') {
-        estadoCelda.textContent = "Presente";
-        estadoCelda.className = "estado estado-presente";
-      } else if (estado === 'ausente') {
-        estadoCelda.textContent = "Ausente";
-        estadoCelda.className = "estado estado-ausente";
-      }
-    }
-
-    function resetearTodo() {
-      const filas = document.querySelectorAll("#tablaAsistencia tr");
-      filas.forEach(fila => {
-        const estadoCelda = fila.querySelector(".estado");
-        estadoCelda.textContent = "Sin marcar";
-        estadoCelda.className = "estado estado-pendiente";
-      });
-    }
-  </script>
+  
 </body>
 </html>
