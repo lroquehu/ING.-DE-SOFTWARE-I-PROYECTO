@@ -811,8 +811,8 @@ function toggleTheme() {
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     applyTheme(newTheme)
 }
-
-// Funcion para asistencia
+// FUNCIONES PARA ASISTENCIA
+// Funcion marcar
 function marcar(boton, estado) {
     const fila = boton.closest("tr");
     const estadoCelda = fila.querySelector(".estado");
@@ -831,7 +831,7 @@ function marcar(boton, estado) {
         estadoCelda.className = "estado estado-justificado";
     }
 }
-
+//Funcion para resetear todo
 function resetearTodo() {
     document.querySelectorAll("#tablaAsistencia .estado").forEach(celda => {
     celda.textContent = "Sin marcar";
