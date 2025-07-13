@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="cambios-as.css">
-    
-    
+    <!-- FullCalendar -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+
 </head>
 <body>
     <!-- Navbar superior -->
@@ -58,6 +60,7 @@
         <ul class="menu">
             <li><a href="#" class="active" onclick="toggleVisibility('dashboard', null, 'Dashboard')"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
             <li><a href="#" onclick="toggleVisibility('asistencia', null, 'Lista de Asistencia')"><i class="fa-solid fa-clipboard-list"></i><span>Asistencia</span></a></li>
+            <li><a href="#" onclick="toggleVisibility('calendario', null, 'Calendario')"><i class="fa-solid fa-clipboard-list"></i><span>Calendario</span></a></li>
 
 
             <li>
@@ -782,6 +785,15 @@
                 </div>
             </div>
         </div>
+
+     <!-- CALENDARIO (versión inicial) -->
+<div class="calendario container mt-4" style="display: none;">
+    <h2 class="section-title mb-4">Calendario de Cursos</h2>
+    <div id="calendar">
+        <p class="text-muted">Aquí aparecerá el calendario.</p>
+    </div>
+</div>
+
     </main>
 
 
