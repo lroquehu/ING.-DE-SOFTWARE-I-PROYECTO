@@ -838,3 +838,29 @@ function resetearTodo() {
     celda.className = "estado estado-pendiente";
     });
 }
+
+//calendario
+document.addEventListener('DOMContentLoaded', function () {
+    let calendarEl = document.getElementById('calendar');
+    let modal = new bootstrap.Modal(document.getElementById('modalCurso'));
+    let calendar;
+    let eventos = JSON.parse(localStorage.getItem('eventosCursos')) || [];
+
+    function renderizarCalendario() {
+        calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'es',
+            height: 'auto',
+            selectable: true,
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: ''
+            },
+            events: eventos,
+        });
+        calendar.render();
+    }
+
+    renderizarCalendario();
+});
