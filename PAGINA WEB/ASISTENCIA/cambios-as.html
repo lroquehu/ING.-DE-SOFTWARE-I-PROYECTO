@@ -787,79 +787,43 @@
         </div>
 
 <!-- CALENDARIO -->
-<div class="calendario container mt-4" style="display: none;">
-    <h2 class="section-title mb-4">Calendario de Cursos</h2>
+        <div class="calendario container mt-4" style="display: none;">
+            <h2 class="section-title mb-4">Calendario de Cursos</h2>
+            <div id="calendar"></div>
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
-        <button class="btn btn-primary" onclick="abrirModalAgregarCurso()">
-            <i class="fa-solid fa-plus"></i> Añadir Curso
-        </button>
-        <div id="filtroMes" class="form-group">
-            <select class="form-select">
-                <option>Julio 2025</option>
-                <option>Agosto 2025</option>
-                <option>Setiembre 2025</option>
-            </select>
-        </div>
-    </div>
-
-    <div id="calendar" class="calendar-grid p-4 rounded bg-white shadow-sm">
-        <table class="table table-bordered text-center align-middle">
-            <thead class="table-light">
-                <tr>
-                    <th>Dom</th>
-                    <th>Lun</th>
-                    <th>Mar</th>
-                    <th>Mié</th>
-                    <th>Jue</th>
-                    <th>Vie</th>
-                    <th>Sáb</th>
-                </tr>
-            </thead>
-            <tbody id="calendarBody">
-                <tr>
-                    <td colspan="7" class="text-muted">Calendario cargando...</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalCurso" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <form id="formCurso">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Agregar / Editar Curso</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            <!-- Modal -->
+            <div class="modal fade" id="modalCurso" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <form id="formCurso">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Agregar / Editar Curso</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" id="cursoId">
+                                <div class="mb-3">
+                                    <label for="tituloCurso" class="form-label">Nombre del curso</label>
+                                    <input type="text" class="form-control" id="tituloCurso" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="fechaCurso" class="form-label">Fecha</label>
+                                    <input type="date" class="form-control" id="fechaCurso" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="colorCurso" class="form-label">Color del evento</label>
+                                    <input type="color" class="form-control form-control-color" id="colorCurso" value="#3498db" title="Color">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                <button type="button" class="btn btn-danger" id="btnEliminar" style="display: none;">Eliminar</button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="modal-body">
-                        <input type="hidden" id="cursoId">
-                        <div class="mb-3">
-                            <label for="tituloCurso" class="form-label">Nombre del curso</label>
-                            <input type="text" class="form-control" id="tituloCurso" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="fechaCurso" class="form-label">Fecha</label>
-                            <input type="date" class="form-control" id="fechaCurso" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="colorCurso" class="form-label">Color del evento</label>
-                            <input type="color" class="form-control form-control-color" id="colorCurso" value="#3498db" title="Color">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                        <button type="button" class="btn btn-danger" id="btnEliminar" style="display: none;">Eliminar</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-
     </main>
 
 
