@@ -786,13 +786,28 @@
             </div>
         </div>
 
-     <!-- CALENDARIO (versión inicial) -->
+<!-- CALENDARIO (estructura visual) -->
 <div class="calendario container mt-4" style="display: none;">
     <h2 class="section-title mb-4">Calendario de Cursos</h2>
-    <div id="calendar">
-        <p class="text-muted">Aquí aparecerá el calendario.</p>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button class="btn btn-primary" onclick="abrirModalAgregarCurso()">
+            <i class="fa-solid fa-plus"></i> Añadir Curso
+        </button>
+        <div id="filtroMes" class="form-group">
+            <select class="form-select">
+                <option>Julio 2025</option>
+                <option>Agosto 2025</option>
+                <option>Setiembre 2025</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="calendar" class="calendar-grid p-4 rounded bg-white shadow-sm">
+        <p class="text-muted">Aquí aparecerá el calendario con los cursos añadidos.</p>
     </div>
 </div>
+
 
     </main>
 
