@@ -840,49 +840,31 @@ function resetearTodo() {
 }
 
 //calendario
-document.addEventListener('DOMContentLoaded', function () {
-    let calendarEl = document.getElementById('calendar');
-    let modal = new bootstrap.Modal(document.getElementById('modalCurso'));
-    let calendar;
-    let eventos = JSON.parse(localStorage.getItem('eventosCursos')) || [];
+document.getElementById('formCurso').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const id = document.getElementById('cursoId').value;
+    const title = document.getElementById('tituloCurso').value;
+    const date = document.getElementById('fechaCurso').value;
+    const color = document.getElementById('colorCurso').value;
 
-    function renderizarCalendario() {
-        calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            locale: 'es',
-            height: 'auto',
-            selectable: true,
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: ''
-            },
-            events: eventos,
-    dateClick: function (info) {
-    document.getElementById('cursoId').value = '';
-    document.getElementById('fechaCurso').value = info.dateStr;
-    document.getElementById('tituloCurso').value = '';
-    document.getElementById('colorCurso').value = '#3498db';
-    document.getElementById('btnEliminar').style.display = 'none';
-    modal.show();
-
-},
-eventClick: function (info) {
-    const evento = info.event;
-    document.getElementById('cursoId').value = evento.id;
-    document.getElementById('tituloCurso').value = evento.title;
-    document.getElementById('fechaCurso').value = evento.startStr;
-    document.getElementById('colorCurso').value = evento.backgroundColor;
-    document.getElementById('btnEliminar').style.display = 'inline-block';
-    modal.show();
-},
-
-        });
-        calendar.render();
+    if (id) {
+        eventos = eventos.map(ev => ev.id === id ? { id, title, start: date, backgroundColor: color } : ev);
+    } else {
+        const newId = Date.now().toString();
+        eventos.push({ id: newId, title, start: date, backgroundColor: color });
     }
 
+    localStorage.setItem('eventosCursos', JSON.stringify(eventos));
+    modal.hide();
+    calendar.destroy();
     renderizarCalendario();
-    
 });
 
-
+document.getElementById('btnEliminar').addEventListener('click', function () {
+    const id = document.getElementById('cursoId').value;
+    eventos = eventos.filter(ev => ev.id !== id);
+    localStorage.setItem('eventosCursos', JSON.stringify(eventos));
+    modal.hide();
+    calendar.destroy();
+    renderizarCalendario();
+});
