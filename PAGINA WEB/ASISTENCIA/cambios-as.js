@@ -865,7 +865,18 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('colorCurso').value = '#3498db';
     document.getElementById('btnEliminar').style.display = 'none';
     modal.show();
+
 },
+eventClick: function (info) {
+    const evento = info.event;
+    document.getElementById('cursoId').value = evento.id;
+    document.getElementById('tituloCurso').value = evento.title;
+    document.getElementById('fechaCurso').value = evento.startStr;
+    document.getElementById('colorCurso').value = evento.backgroundColor;
+    document.getElementById('btnEliminar').style.display = 'inline-block';
+    modal.show();
+},
+
         });
         calendar.render();
     }
