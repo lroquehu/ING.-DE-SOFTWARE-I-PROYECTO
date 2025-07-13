@@ -858,9 +858,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 right: ''
             },
             events: eventos,
+    dateClick: function (info) {
+    document.getElementById('cursoId').value = '';
+    document.getElementById('fechaCurso').value = info.dateStr;
+    document.getElementById('tituloCurso').value = '';
+    document.getElementById('colorCurso').value = '#3498db';
+    document.getElementById('btnEliminar').style.display = 'none';
+    modal.show();
+},
         });
         calendar.render();
     }
 
     renderizarCalendario();
+    
 });
+
+
