@@ -523,15 +523,31 @@ function updateCounters() {
 
 
 function toggleVisibility(mainOption, subOption, title) {
-    // Ocultar todas las secciones
+    if (typeof calendar !== 'undefined' && calendar) {
+        calendar.destroy();
+        calendar = null;
+    }
+
+    document.querySelectorAll('.dashboard, .asistencia, .calendario').forEach(div => {
+        div.style.display = 'none';
+    });
+
     document.querySelectorAll('.suboption-panel > div').forEach(div => {
         div.style.display = 'none';
     });
 
-    // Mostrar la sección seleccionada
     if (mainOption) {
         const section = document.querySelector(`.${mainOption.toLowerCase()}`);
         if (section) section.style.display = 'block';
+
+        if (mainOption.toLowerCase() === 'calendario') {
+            setTimeout(() => {
+                const calendarContainer = document.getElementById('calendar');
+                if (calendarContainer && calendarContainer.offsetParent !== null) {
+                    mostrarCalendario();
+                }
+            }, 100);
+        }
     }
 
     if (subOption) {
@@ -539,10 +555,10 @@ function toggleVisibility(mainOption, subOption, title) {
         if (section) section.style.display = 'block';
     }
 
-    // Actualizar título
+    // Actualizar el título
     if (title) document.querySelector('.navbar-brand').innerHTML = `${title}`;
 
-    // Inicializar DataTables solo cuando se muestra la sección
+    // Inicializar DataTables
     if (subOption === 'estudiante') {
         initializeDataTable();
     } else if (subOption === 'docente') {
@@ -551,7 +567,7 @@ function toggleVisibility(mainOption, subOption, title) {
         initializeDataTableCurso();
     }
 
-    // Reiniciar estado de edición al cambiar de sección
+    // Reset de edición
     editingInfo = { tipo: null, id: null };
 
     // Restaurar texto de botones
@@ -564,6 +580,7 @@ function toggleVisibility(mainOption, subOption, title) {
 
     if (mainOption === 'dashboard') updateAll();
 }
+
 
 function initCharts() {
     // Gráfico de distribución por niveles
@@ -840,47 +857,57 @@ function resetearTodo() {
 }
 
 //calendario
-document.addEventListener('DOMContentLoaded', function () {
-    let calendarEl = document.getElementById('calendar');
-    let modal = new bootstrap.Modal(document.getElementById('modalCurso'));
-    let calendar;
-    let eventos = JSON.parse(localStorage.getItem('eventosCursos')) || [];
+let calendar;
+let eventos = JSON.parse(localStorage.getItem('eventosCursos')) || [];
 
-    function renderizarCalendario() {
-        calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            locale: 'es',
-            height: 'auto',
-            selectable: true,
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: ''
-            },
-            events: eventos,
-            dateClick: function (info) {
-                document.getElementById('cursoId').value = '';
-                document.getElementById('fechaCurso').value = info.dateStr;
-                document.getElementById('tituloCurso').value = '';
-                document.getElementById('colorCurso').value = '#3498db';
-                document.getElementById('btnEliminar').style.display = 'none';
-                modal.show();
-            },
-            eventClick: function (info) {
-                const evento = info.event;
-                document.getElementById('cursoId').value = evento.id;
-                document.getElementById('tituloCurso').value = evento.title;
-                document.getElementById('fechaCurso').value = evento.startStr;
-                document.getElementById('colorCurso').value = evento.backgroundColor;
-                document.getElementById('btnEliminar').style.display = 'inline-block';
-                modal.show();
-            }
-        });
-        calendar.render();
+function mostrarCalendario() {
+    const calendarEl = document.getElementById('calendar');
+    const contenedorCalendario = document.getElementById('calendario');
+
+    // Asegurar que el contenedor esté visible antes de renderizar
+    if (contenedorCalendario.style.display === 'none') return;
+
+    if (calendar) {
+        calendar.destroy();
     }
 
-    renderizarCalendario();
+    calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'es',
+        height: 'auto',
+        selectable: true,
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: ''
+        },
+        events: eventos,
+        dateClick: function (info) {
+            document.getElementById('cursoId').value = '';
+            document.getElementById('fechaCurso').value = info.dateStr;
+            document.getElementById('tituloCurso').value = '';
+            document.getElementById('colorCurso').value = '#3498db';
+            document.getElementById('btnEliminar').style.display = 'none';
+            const modal = new bootstrap.Modal(document.getElementById('modalCurso'));
+            modal.show();
+        },
+        eventClick: function (info) {
+            const evento = info.event;
+            document.getElementById('cursoId').value = evento.id;
+            document.getElementById('tituloCurso').value = evento.title;
+            document.getElementById('fechaCurso').value = evento.startStr;
+            document.getElementById('colorCurso').value = evento.backgroundColor;
+            document.getElementById('btnEliminar').style.display = 'inline-block';
+            const modal = new bootstrap.Modal(document.getElementById('modalCurso'));
+            modal.show();
+        }
+    });
 
+    calendar.render();
+}
+
+// Listeners de formulario
+document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('formCurso').addEventListener('submit', function (e) {
         e.preventDefault();
         const id = document.getElementById('cursoId').value;
@@ -896,17 +923,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         localStorage.setItem('eventosCursos', JSON.stringify(eventos));
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalCurso'));
         modal.hide();
         calendar.destroy();
-        renderizarCalendario();
+        mostrarCalendario();
     });
 
     document.getElementById('btnEliminar').addEventListener('click', function () {
         const id = document.getElementById('cursoId').value;
         eventos = eventos.filter(ev => ev.id !== id);
         localStorage.setItem('eventosCursos', JSON.stringify(eventos));
+        const modal = bootstrap.Modal.getInstance(document.getElementById('modalCurso'));
         modal.hide();
         calendar.destroy();
-        renderizarCalendario();
+        mostrarCalendario();
     });
 });

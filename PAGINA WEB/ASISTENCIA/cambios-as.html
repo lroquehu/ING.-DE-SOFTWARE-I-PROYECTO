@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="cambios-as.css">
-    <!-- FullCalendar -->
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet" />
-
+    
 </head>
 <body>
     <!-- Navbar superior -->
@@ -61,8 +57,11 @@
         <ul class="menu">
             <li><a href="#" class="active" onclick="toggleVisibility('dashboard', null, 'Dashboard')"><i class="fa-solid fa-house"></i><span>Dashboard</span></a></li>
             <li><a href="#" onclick="toggleVisibility('asistencia', null, 'Lista de Asistencia')"><i class="fa-solid fa-clipboard-list"></i><span>Asistencia</span></a></li>
-            <li><a href="#" onclick="toggleVisibility('calendario', null, 'Calendario')"><i class="fa-solid fa-clipboard-list"></i><span>Calendario</span></a></li>
-
+            <li>
+                <a href="#" onclick="toggleVisibility('calendario', null, 'Calendario')">
+                    <i class="fa-solid fa-clipboard-list"></i><span>Calendario</span>
+                </a>
+            </li>
 
             <li>
                 <details>
@@ -787,44 +786,45 @@
             </div>
         </div>
 
-<!-- CALENDARIO -->
-        <div class="calendario container mt-4" style="display: none;">
-            <h2 class="section-title mb-4">Calendario de Cursos</h2>
-            <div id="calendar"></div>
+    <!-- CALENDARIO -->
+    <div id="calendario" class="calendario container mt-4" style="display: none;">
+        <h2 class="section-title mb-4">Calendario de Cursos</h2>
+        <div id="calendar"></div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="modalCurso" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <form id="formCurso">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Agregar / Editar Curso</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        <!-- Modal -->
+        <div class="modal fade" id="modalCurso" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form id="formCurso">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Agregar / Editar Curso</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <input type="hidden" id="cursoId">
+                            <div class="mb-3">
+                                <label for="tituloCurso" class="form-label">Nombre del curso</label>
+                                <input type="text" class="form-control" id="tituloCurso" required>
                             </div>
-                            <div class="modal-body">
-                                <input type="hidden" id="cursoId">
-                                <div class="mb-3">
-                                    <label for="tituloCurso" class="form-label">Nombre del curso</label>
-                                    <input type="text" class="form-control" id="tituloCurso" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="fechaCurso" class="form-label">Fecha</label>
-                                    <input type="date" class="form-control" id="fechaCurso" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="colorCurso" class="form-label">Color del evento</label>
-                                    <input type="color" class="form-control form-control-color" id="colorCurso" value="#3498db" title="Color">
-                                </div>
+                            <div class="mb-3">
+                                <label for="fechaCurso" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="fechaCurso" required>
                             </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-primary">Guardar</button>
-                                <button type="button" class="btn btn-danger" id="btnEliminar" style="display: none;">Eliminar</button>
+                            <div class="mb-3">
+                                <label for="colorCurso" class="form-label">Color del evento</label>
+                                <input type="color" class="form-control form-control-color" id="colorCurso" value="#3498db" title="Color">
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                            <button type="button" class="btn btn-danger" id="btnEliminar" style="display: none;">Eliminar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+
     </main>
 
 
@@ -837,9 +837,9 @@
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.print.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="cambios-as.js"></script>
 
 </body>
