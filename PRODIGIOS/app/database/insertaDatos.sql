@@ -125,26 +125,5 @@ INSERT INTO pagos (id_estudiante, monto, fecha_pago, metodo_pago) VALUES
 (20,600,'2025-07-05','Tarjeta');
 
 
-INSERT INTO credenciales (nombre, email, telefono, contraseña) VALUES
-('Ana Ramírez','ana.ramirez@email.com','987654321','ana123'),
-('Luis Fernández','luis.fernandez@email.com','976543210','luis123'),
-('Carla Mendoza','carla.mendoza@email.com','965432109','carla123'),
-('Jorge Quispe','jorge.quispe@email.com','954321098','jorge123'),
-('Lucía Valdez','lucia.valdez@email.com','943210987','lucia123'),
-('Pedro Lopez','pedro.lopez@email.com','932109876','pedro123'),
-('Marta Castillo','marta.castillo@email.com','921098765','marta123'),
-('Daniel Reyes','daniel.reyes@email.com','910987654','daniel123'),
-('Valeria Ortega','valeria.ortega@email.com','989876543','valeria123'),
-('Esteban Silva','esteban.silva@email.com','978765432','esteban123'),
-('Isabel Moreno','isabel.moreno@email.com','967654321','isabel123'),
-('Diego Soto','diego.soto@email.com','956543210','diego123'),
-('Natalia Rojas','natalia.rojas@email.com','945432109','natalia123'),
-('Gabriel Salazar','gabriel.salazar@email.com','934321098','gabriel123'),
-('Mariana Aguilar','mariana.aguilar@email.com','923210987','mariana123'),
-('Bruno Núñez','bruno.nunez@email.com','912109876','bruno123'),
-('Julieta Chávez','julieta.chavez@email.com','901098765','julieta123'),
-('Rodrigo García','rodrigo.garcia@email.com','990987654','rodrigo123'),
-('Paula Ríos','paula.rios@email.com','979876543','paula123'),
-('Cristian Flores','cristian.flores@email.com','968765432','cristian123');
 
 
