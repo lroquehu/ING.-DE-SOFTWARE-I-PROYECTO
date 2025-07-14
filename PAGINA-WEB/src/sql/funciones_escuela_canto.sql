@@ -61,3 +61,37 @@ BEGIN
     FROM `pagos`
     WHERE `id_estudiante` = p_id_estudiante;
 END;
+
+-- Procedimiento para crear una nueva notificación
+CREATE PROCEDURE `crear_notificacion` (
+    IN `p_id_estudiante` INT,
+    IN `p_titulo` VARCHAR(100),
+    IN `p_mensaje` TEXT,
+    IN `p_tipo` ENUM('info', 'aviso', 'urgente')
+)
+BEGIN
+    INSERT INTO `notificaciones` 
+    (`id_estudiante`, `titulo`, `mensaje`, `tipo`)
+    VALUES (p_id_estudiante, p_titulo, p_mensaje, p_tipo);
+END;
+
+-- Procedimiento para marcar una notificación como leída
+CREATE PROCEDURE `marcar_notificacion_leida` (
+    IN `p_id_notificacion` INT
+)
+BEGIN
+    UPDATE `notificaciones`
+    SET `leida` = 1
+    WHERE `id_notificacion` = p_id_notificacion;
+END;
+
+-- Procedimiento para obtener notificaciones de un estudiante
+CREATE PROCEDURE `obtener_notificaciones_estudiante` (
+    IN `p_id_estudiante` INT
+)
+BEGIN
+    SELECT *
+    FROM `notificaciones`
+    WHERE `id_estudiante` = p_id_estudiante
+    ORDER BY `fecha_creacion` DESC;
+END;
