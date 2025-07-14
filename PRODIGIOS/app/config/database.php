@@ -3,7 +3,7 @@
     /*CLASE TODAVIA NO USADA*/
 class Database {
     private $host = 'localhost';
-    private $db = 'escuela_canto';
+    private $db = 'prodigios';
     private $user = 'root';
     private $pass = '';
     public $conn;

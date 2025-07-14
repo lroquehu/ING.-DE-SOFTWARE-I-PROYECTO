@@ -12,7 +12,7 @@
       $email = $_POST["emailLogin"];
       $password = $_POST["passwordLogin"];
 
-      $stmt = $conn->prepare("SELECT contraseña FROM credenciales WHERE email = ?");
+      $stmt = $conn->prepare("SELECT contraseña,ID FROM credenciales WHERE email = ?");
       $stmt->bind_param("s", $email);
       $stmt->execute();
       $result = $stmt->get_result();
@@ -20,6 +20,7 @@
       if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row["contraseña"])) {
+          $_SESSION['user_id'] = $row['ID'];
           header("location: index.php?page=app");
           exit;
         } else {

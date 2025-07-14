@@ -2,8 +2,15 @@
 require_once ROOT . 'models/Usuario.php';
 
 class AppController {
-    
+    public function getUserInfo() {
+        session_start();
+        
+        $usuario = new Usuario();
+        $userId = $_SESSION['user_id'];
+        return $usuario->getUserInfo($userId);
+    }
     public function app() {
+        $userInfor = $this->getUserInfo();
         require_once ROOT .  'views/layouts/header.php';
         require_once ROOT .  'views/layouts/aside.php';
 

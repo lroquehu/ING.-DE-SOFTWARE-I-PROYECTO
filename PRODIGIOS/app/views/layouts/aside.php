@@ -5,7 +5,7 @@
   <h2><span>PRODIGIOS</span></h2>
   <div class="profile-section">
     <img src="img/user.jpg" alt="Foto de perfil" class="profile-img">
-    <h4 class="profile-name">Luis Miguel Roque Huacca</h4>
+    <h4 class="profile-name"> <?=$userInfor['nombre']?> </h4>
     <p class="profile-role">Administrador</p>
   </div>
   <ul class="menu">

@@ -34,9 +34,10 @@ class Usuario {
         */
     }
     public function getUserInfo($userId) {
-        $stmt = $this->db->prepare("SELECT * FROM usuario WHERE idUsuario = ?");
+        $stmt = $this->db->prepare("SELECT * FROM credenciales WHERE ID = ?");
         $stmt->execute([$userId]);
         $userInfo = $stmt->fetch(PDO::FETCH_ASSOC);
+        return array_merge($userInfo);
 
         /*
         if ($userInfo['tipoUsuario'] == 'admin') {
@@ -44,17 +45,7 @@ class Usuario {
             $stmt->execute([$userId]);
             $adminInfo = $stmt->fetch(PDO::FETCH_ASSOC);
             return array_merge($userInfo, $adminInfo);
-        } elseif ($userInfo['tipoUsuario'] == 'cajero') {
-            $stmt = $this->db->prepare("SELECT * FROM cajero WHERE idUsuario = ?");
-            $stmt->execute([$userId]);
-            $cajeroInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-            return array_merge($userInfo, $cajeroInfo);
-        } elseif ($userInfo['tipoUsuario'] == 'cliente') {
-            $stmt = $this->db->prepare("SELECT * FROM cliente WHERE idUsuario = ?");
-            $stmt->execute([$userId]);
-            $clienteInfo = $stmt->fetch(PDO::FETCH_ASSOC);
-            return array_merge($userInfo, $clienteInfo);
-        }
+        } 
         */
     }
 }
