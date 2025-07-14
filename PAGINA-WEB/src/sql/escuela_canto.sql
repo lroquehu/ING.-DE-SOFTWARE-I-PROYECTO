@@ -120,3 +120,20 @@ CREATE TABLE IF NOT EXISTS `pagos` (
   INDEX `id_estudiante_idx` (`id_estudiante`),
   CONSTRAINT `fk_pagos_estudiante` FOREIGN KEY (`id_estudiante`) REFERENCES `estudiantes` (`id_estudiante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- -----------------------------------------------------
+-- Tabla: notificaciones
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `notificaciones` (
+  `id_notificacion` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_estudiante` INT(11) NULL DEFAULT NULL,
+  `titulo` VARCHAR(100) NOT NULL,
+  `mensaje` TEXT NOT NULL,
+  `tipo` ENUM('info', 'aviso', 'urgente') NOT NULL DEFAULT 'info',
+  `fecha_creacion` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP(),
+  `leida` TINYINT(1) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id_notificacion`),
+  INDEX `id_estudiante_idx` (`id_estudiante`),
+  CONSTRAINT `fk_notificaciones_estudiante` FOREIGN KEY (`id_estudiante`) 
+  REFERENCES `estudiantes` (`id_estudiante`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
