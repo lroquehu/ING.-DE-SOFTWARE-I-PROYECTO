@@ -25,6 +25,7 @@
                     <i class="fa-solid fa-bell"></i>
                     <span class="notification-badge">0</span>
                 </div>
+                <div id="notificaciones-contenedor"></div>
                 <div class="chat-icon">
                     <i class="fa-solid fa-comment-dots"></i>
                     <span class="notification-badge">0</span>
