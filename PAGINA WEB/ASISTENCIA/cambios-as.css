@@ -848,3 +848,20 @@ body.theme-dark {
         font-size: 1.5rem;
     }
 }
+
+#calendar {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+}
+.fc-toolbar-title {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+.fc-daygrid-event {
+    border: none;
+    padding: 3px 6px;
+    border-radius: 6px;
+    font-weight: 500;
+}
