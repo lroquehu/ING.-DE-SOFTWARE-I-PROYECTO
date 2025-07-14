@@ -369,6 +369,28 @@ $('#tablaDinamicaDocente').on('click', '.btn-delete', function () {
     updateAll();
 });
 
+
+function updateStateFromTable(type) {
+
+    const tableId = type === 'docentes' ? '#tablaDinamicaDocente' : 
+    type === 'cursos' ? '#tablaDinamicaCurso' : '#tablaDinamica';
+
+    if ($.fn.DataTable.isDataTable(tableId)) {
+        const table = $(tableId).DataTable();
+        state[type] = table.rows().data().map(row => ({
+            id: parseInt(row[0]),
+            nombre: row[1],
+            dni: row[2],
+            fecha_nacimiento: row[3],
+            direccion: row[4],
+            contacto: row[5],
+            curso: row[6],
+            nivel: row[7],
+            horario: row[8],
+            estado: row[9]
+        })).toArray();
+    }
+}
 function initializeDataTableCurso() {
     if ($.fn.DataTable.isDataTable('#tablaDinamicaCurso')) {
         $('#tablaDinamicaCurso').DataTable().destroy();
