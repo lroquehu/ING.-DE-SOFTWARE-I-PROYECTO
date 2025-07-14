@@ -4,22 +4,22 @@
   <div class="dashboard-cards">
     <div class="card">
       <h3><i class="fa-solid fa-user-graduate me-2"></i> Estudiantes Registrados</h3>
-      <p id="total-estudiantes">0</p>
+      <p id="total-estudiantes"><?= count($students)?></p>
       <small>Total en el sistema</small>
     </div>
     <div class="card">
       <h3><i class="fa-solid fa-chalkboard-user me-2"></i> Docentes Activos</h3>
-      <p id="total-docentes">0</p>
+      <p id="total-docentes"><?= count($teachers)?></p>
       <small>Enseñando actualmente</small>
     </div>
     <div class="card">
       <h3><i class="fa-solid fa-book"></i> Cursos Disponibles</h3>
-      <p id="total-cursos">0</p>
+      <p id="total-cursos"><?= count($cursos)?></p>
       <small>Ofertados este semestre</small>
     </div>
     <div class="card">
       <h3><i class="fa-solid fa-calendar-check me-2"></i> Clases Esta Semana</h3>
-      <p>42</p>
+      <p><?= count($clases)?></p>
       <small>Programadas</small>
     </div>
   </div>

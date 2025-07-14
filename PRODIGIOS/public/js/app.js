@@ -500,7 +500,7 @@ function initEventListeners() {
         });
     });
 }
-
+/*
 function updateCounters() {
     let totalEst = 0;
     if ($.fn.DataTable.isDataTable('#tablaDinamica')) {
@@ -520,7 +520,7 @@ function updateCounters() {
     }
     document.getElementById('total-cursos').textContent = totalCur;
 }
-
+*/
 
 function toggleVisibility(mainOption, subOption, title) {
     if (typeof calendar !== 'undefined' && calendar) {
