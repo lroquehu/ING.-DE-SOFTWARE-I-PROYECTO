@@ -871,7 +871,7 @@ function mostrarCalendario() {
         calendar.destroy();
     }
 
-    calendar = new FullCalendar.Calendar(calendarEl, {
+        calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         locale: 'es',
         height: 'auto',
@@ -879,10 +879,10 @@ function mostrarCalendario() {
         headerToolbar: {
             left: 'prev,next today',
             center: 'title',
-            right: ''
+            right: 'dayGridMonth,timeGridWeek,timeGridDay' // aquí agregas los botones
         },
         events: eventos,
-        dateClick: function (info) {
+        dateClick: function(info) {
             document.getElementById('cursoId').value = '';
             document.getElementById('fechaCurso').value = info.dateStr;
             document.getElementById('tituloCurso').value = '';
@@ -891,7 +891,7 @@ function mostrarCalendario() {
             const modal = new bootstrap.Modal(document.getElementById('modalCurso'));
             modal.show();
         },
-        eventClick: function (info) {
+        eventClick: function(info) {
             const evento = info.event;
             document.getElementById('cursoId').value = evento.id;
             document.getElementById('tituloCurso').value = evento.title;

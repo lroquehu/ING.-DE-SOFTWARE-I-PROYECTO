@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="css/app.css">
 
 
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid/main.min.css' rel='stylesheet' />
+<link href='https://cdn.jsdelivr.net/npm/@fullcalendar/timegrid/main.min.css' rel='stylesheet' />
+
+
 </head>
 
 <body>
