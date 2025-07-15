@@ -22,6 +22,19 @@
               <label for="fechaCurso" class="form-label">Fecha</label>
               <input type="date" class="form-control" id="fechaCurso" required>
             </div>
+
+              <!-- 🕒 Campo Hora de inicio -->
+            <div class="mb-3">
+              <label for="horaInicio" class="form-label">Hora de inicio</label>
+              <input type="time" class="form-control" id="horaInicio" required>
+            </div>
+
+            <!-- 🕒 Campo Hora de fin -->
+            <div class="mb-3">
+              <label for="horaFin" class="form-label">Hora de fin</label>
+              <input type="time" class="form-control" id="horaFin" required>
+            </div>
+            
             <div class="mb-3">
               <label for="colorCurso" class="form-label">Color del evento</label>
               <input type="color" class="form-control form-control-color" id="colorCurso" value="#3498db" title="Color">
