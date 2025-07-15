@@ -1,5 +1,0 @@
-Instalacion:
-1. Descomprima el ZIP en su servidor web
-2. Importe la base de datos:
-   mysql -u usuario -p escuela_canto < sql/escuela_canto.sql
-3. Renombre php/config-sample.php a config.php y configure sus credenciales
