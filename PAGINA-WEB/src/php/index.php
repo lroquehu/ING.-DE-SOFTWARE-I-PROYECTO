@@ -651,6 +651,7 @@
           <div class="card border-0 shadow-sm h-100">
             <div class="card-body p-4">
               <h3 class="mb-4">Envíanos un Mensaje</h3>
+
               <form id="contactForm" class="needs-validation" novalidate action="https://formspree.io/f/mldledqd" method="POST">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nombre Completo</label>
