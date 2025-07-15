@@ -877,9 +877,16 @@ function mostrarCalendario() {
         height: 'auto',
         selectable: true,
         headerToolbar: {
-            left: 'prev,next today',
+            left: 'prev,next',
             center: 'title',
-            right: 'dayGridMonth,timeGridWeek,timeGridDay' // aquí agregas los botones
+            right: 'dayGridMonth,timeGridWeek,timeGridDay' 
+        },
+
+        buttonText: {
+            day: 'Hoy', 
+            month: 'Mes',
+            week: 'Semana',
+            year: 'Año' 
         },
         events: eventos,
         dateClick: function(info) {
