@@ -850,10 +850,10 @@ body.theme-dark {
 }
 
 #calendar {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: var(--card-shadow);
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 .fc-toolbar-title {
     font-size: 1.5rem;
