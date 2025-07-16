@@ -872,7 +872,7 @@ function mostrarCalendario() {
     }
 
         calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
+        initialView: 'timeGridWeek',
         locale: 'es',
         height: 'auto',
         selectable: true,
@@ -920,13 +920,27 @@ document.addEventListener('DOMContentLoaded', function () {
         const id = document.getElementById('cursoId').value;
         const title = document.getElementById('tituloCurso').value;
         const date = document.getElementById('fechaCurso').value;
+        
+        const horaInicio = document.getElementById('horaInicio').value;
+        const horaFin = document.getElementById('horaFin').value;
+
         const color = document.getElementById('colorCurso').value;
 
+        const start = `${date}T${horaInicio}`;
+        const end = `${date}T${horaFin}`;
+
         if (id) {
-            eventos = eventos.map(ev => ev.id === id ? { id, title, start: date, backgroundColor: color } : ev);
+            eventos = eventos.map(ev => ev.id === id ? { id, title, start: date, backgroundColor: color, allDay:false} : ev);
         } else {
             const newId = Date.now().toString();
-            eventos.push({ id: newId, title, start: date, backgroundColor: color });
+            eventos.push({
+            id: newId,
+            title: title,
+            start: start,
+            end: end,
+            backgroundColor: color,
+            allDay: false 
+            });        
         }
 
         localStorage.setItem('eventosCursos', JSON.stringify(eventos));
