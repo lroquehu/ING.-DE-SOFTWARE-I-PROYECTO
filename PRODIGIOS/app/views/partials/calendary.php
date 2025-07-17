@@ -7,16 +7,17 @@
 <div class="modal fade" id="modalCurso" tabindex="-1" aria-labelledby="modalCursoLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content shadow rounded-4 border-0">
-      <div class="modal-header bg-primary text-white">
+      <div class="modal-header custom-modal-header">
         <h5 class="modal-title" id="modalCursoLabel">Agregar / Editar Curso</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
+
       <form id="formCurso" class="p-3">
         <input type="hidden" id="cursoId">
 
         <div class="mb-3">
           <label for="tituloCurso" class="form-label">Nombre del curso</label>
-          <input type="text" class="form-control" id="tituloCurso" required placeholder="Ej. Álgebra Lineal">
+          <input type="text" class="form-control" id="tituloCurso" required placeholder="Ej. Canto">
         </div>
 
         <div class="mb-3">

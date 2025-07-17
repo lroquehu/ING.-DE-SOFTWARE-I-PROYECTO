@@ -306,7 +306,7 @@ body {
 
 .btn-custom:hover {
     background: linear-gradient(135deg, #2980b9 0%, #1a5a8a 100%);
-    background-color: #0056b3;
+    background-color: #2d00b3;
     color: #fff;
 }
 
@@ -446,7 +446,7 @@ body {
 
 .form-control-lg:focus {
     border-color: var(--secondary);
-    box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(16, 60, 90, 0.25);
 }
 
 .btn-lg {
@@ -850,11 +850,26 @@ body.theme-dark {
 }
 
 #calendar {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border: 1px solid #e0e0e0;
 }
+.custom-modal-header {
+  background-color: var(--accent); 
+  color: rgb(17, 12, 65);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.custom-modal-header {
+  background-color: #e67e22;
+  color: rgb(78, 20, 154);
+}
+
 .fc-toolbar-title {
     font-size: 1.5rem;
     color: var(--primary);
